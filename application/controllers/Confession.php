@@ -6,12 +6,13 @@ class Confession extends CI_Controller {
 
 	public function index()
 	{
-		$data['name'] = $this->input->post('name');
+		/*$data['name'] = $this->input->post('name');
 		$data['password'] = $this->input->post('password');
-		/*$string['welcome'] = "Welcome To Confession App";
-		$string['msg'] = "Hellp Employee";*/
+		$string['welcome'] = "Welcome To Confession App";
+		$string['msg'] = "Hellp Employee";
 		
-		echo json_encode($data);
+		echo json_encode($data);*/
+		echo "hello";
 	}
 
 
