@@ -15,5 +15,12 @@ class ConfessionModel extends CI_Model {
       	 return $result->result_array();
 	}
 
+	public function postConfession($data)
+	{
+		$result = $this->db->insert('tbl_feed',$data);
+
+		return $result;
+	}
+
 
 }

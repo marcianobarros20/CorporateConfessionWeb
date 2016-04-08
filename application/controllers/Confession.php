@@ -26,6 +26,15 @@ class Confession extends CI_Controller {
 		echo json_encode($result);
 		//print_r($result);
 	}
+	public function postConfession()
+	{
+
+		$data['sender_name'] = $this->input->post('name');
+		$data['sender_msg'] = $this->input->post('confession');
+		$result = $this->ConfessionModel->postConfession($data);
+
+		print_r($result);
+	}
 
 
 
