@@ -33,7 +33,16 @@ class Confession extends CI_Controller {
 		$data['sender_msg'] = $this->input->post('confession');
 		$result = $this->ConfessionModel->postConfession($data);
 
-		print_r($result);
+		if($result)
+		{
+			print_r($result);
+		}
+		else
+		{
+			echo "error";
+		}
+
+		
 	}
 
 
