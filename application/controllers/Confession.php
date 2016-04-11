@@ -49,6 +49,7 @@ class Confession extends CI_Controller {
 
 		$data['sender_name'] = $this->input->post('name');
 		$data['sender_msg'] = $this->input->post('confession');
+		$data['time'] = date("Y-m-d H:i:s");
 		$result = $this->ConfessionModel->postConfession($data);
 
 		if($result)
@@ -100,18 +101,20 @@ public function time_elapsed_string($ptime)
     }
 }
 
-public function showTimeStamp($time)
+public function showTimeStamp()
 {
-	$timestamp = $time;
+	
 
 	//echo $timestamp;
 	//echo time();
 
-	$timeincode = strtotime("2016-04-11 17:28:32");
+	$timeincode = strtotime("2016-04-11 19:04:07");
 
 	$result = $this->time_elapsed_string($timeincode);
 
-	return $result;
+	echo date("Y-m-d H:i:s");
+
+echo $result;
 
 
 	
