@@ -13,6 +13,7 @@ class ConfessionModel extends CI_Model {
 	{
 		//asc");
 		 $result = $this->db->order_by("tbl_id", "desc")->get('tbl_feed');
+		 //$result->propertime = "propertime";
 
       	 return $result->result_array();
 	}
