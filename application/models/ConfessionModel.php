@@ -11,7 +11,9 @@ class ConfessionModel extends CI_Model {
 
 	public function index()
 	{
-		 $result = $this->db->get('tbl_feed');
+		//asc");
+		 $result = $this->db->order_by("tbl_id", "desc")->get('tbl_feed');
+
       	 return $result->result_array();
 	}
 
