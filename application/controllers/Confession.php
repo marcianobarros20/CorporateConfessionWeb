@@ -120,6 +120,33 @@ echo $result;
 	
 }
 
+public function postComment()
+{
+	$data['comment_name'] = $this->input->post('comment_name');
+	$data['comment_msg'] = $this->input->post('comment_msg');
+	$data['comment_time'] = date("Y-m-d H:i:s");
+	$data['confession_id_fk'] = $this->input->post('confession_id_fk');
+
+	$result = $this->ConfessionModel->postComment($data);
+
+	if($result)
+	{
+		print_r($result);
+	}
+}
+
+public function fetchComment()
+{
+	$data['confession_id_fk'] = $this->input->post('confession_id_fk');
+
+	$result = $this->ConfessionModel->fetchComment($data);
+
+	if($result)
+	{
+		print_r($result);
+	}
+}
+
 
 
 
