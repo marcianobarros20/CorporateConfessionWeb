@@ -143,7 +143,8 @@ public function fetchComment()
 
 	if($result)
 	{
-		print_r($result);
+		//print_r($result);
+		echo json_encode($result);
 	}
 }
 
