@@ -38,7 +38,8 @@ class ConfessionModel extends CI_Model {
 	public function fetchComment($data)
 	{
 		$this->db->where($data);
-		$result=$this->db->get('tbl_comment');
+		$result = $this->db->order_by("comment_id", "desc")->get('tbl_comment');
+		//$result=$this->db->get('tbl_comment');
 
 		if($result)
 		{
