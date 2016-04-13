@@ -141,6 +141,18 @@ public function fetchComment()
 
 	$result = $this->ConfessionModel->fetchComment($data);
 
+	$i=0;
+		foreach ($result as $key)
+		{
+			$time = strtotime($key['time']);
+			$time1=$this->time_elapsed_string($time);
+			
+			$result[$i]['propertime'] = $time1;
+
+			$i++;
+			
+		}
+
 	
 
 	if($result)
