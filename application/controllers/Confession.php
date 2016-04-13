@@ -141,10 +141,16 @@ public function fetchComment()
 
 	$result = $this->ConfessionModel->fetchComment($data);
 
+	
+
 	if($result)
 	{
 		//print_r($result);
 		echo json_encode($result);
+	}
+	else
+	{
+		echo "no result";
 	}
 }
 
