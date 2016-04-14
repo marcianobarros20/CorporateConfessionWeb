@@ -49,6 +49,7 @@ class Confession extends CI_Controller {
 
 		$data['sender_name'] = $this->input->post('name');
 		$data['sender_msg'] = $this->input->post('confession');
+		$data['avatar'] = $this->input->post('avatar');
 		$data['time'] = date("Y-m-d H:i:s");
 		$result = $this->ConfessionModel->postConfession($data);
 
