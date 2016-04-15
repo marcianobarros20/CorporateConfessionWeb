@@ -49,12 +49,11 @@ class Confession extends CI_Controller {
 
 		$data['sender_name'] = $this->input->post('name');
 		$data['sender_msg'] = $this->input->post('confession');
-		$data['avatar'] = $this->input->post('avatar');
+//		$data['
+avatar'] = $this->input->post('avatar');
 		$data['time'] = date("Y-m-d H:i:s");
-		//echo json_encode($data);
 		$result = $this->ConfessionModel->postConfession($data);
-//		echo $result;
-//exit;
+
 		if($result)
 		{
 			print_r($result);
