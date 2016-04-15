@@ -127,6 +127,7 @@ public function postComment()
 {
 	$data['comment_name'] = $this->input->post('comment_name');
 	$data['comment_msg'] = $this->input->post('comment_msg');
+	$data['avatar'] = $this->input->post('avatar');
 	$data['comment_time'] = date("Y-m-d H:i:s");
 	$data['confession_id_fk'] = $this->input->post('confession_id_fk');
 
