@@ -262,6 +262,7 @@
                                 <div id="firstform">
                                     
                                         <div class="form-group">
+                                        Your Company's name:
                                         <input type="text" class="form-control" placeholder="Your Company's name">
                                         </div>
                                         <div class="form-group">
