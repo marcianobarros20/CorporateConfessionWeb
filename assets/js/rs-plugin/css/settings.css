@@ -16,7 +16,10 @@ website:   	http://www.themepunch.com
 /*************************
 	-	CAPTIONS	-
 **************************/
-
+.width30
+{
+	width: 30%;
+}
 .tp-hide-revslider,.tp-caption.tp-hidden-caption	{	visibility:hidden !important; display:none !important;}
 
 

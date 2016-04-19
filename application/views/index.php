@@ -262,26 +262,38 @@
                                 <div id="firstform">
                                     
                                         <div class="form-group">
-                                        Your Company's name:
-                                        <input type="text" class="form-control" placeholder="Your Company's name">
+                                        Your Company's Name :
+                                        <input type="text" name="company_name" class="form-control" placeholder="Your Company's name" required="true">
                                         </div>
                                         <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Email of Company">
+                                        Company's Email :
+                                        <input type="email" name="company_email" class="form-control" placeholder="Email of Company" required="true">
                                         </div>
-                                        <div class="form-group">
+                                        <!-- <div class="form-group">
                                             <input type="text" class="form-control" placeholder="Your email">
-                                        </div>
-                                        <button type="button" id="firstsubmit" class="btn btn-primary btn-lg">Submit</button>
+                                        </div> -->
+                                        <button type="submit" id="firstsubmit" class="btn btn-primary btn-lg">Submit</button>
 
                                 </div>
 
                                 <div id="secondform">
                                     
                                         <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Your Fathers name">
+                                        You Are :
+                                        <select class="form-control" name="person_designation" id="select">
+                                          <option value="employee">Employee</option>
+                                          <option value="management">Management Member</option>
+                                          <option value="owner">Owner</option>
+                                        </select>
+                                        <!-- <input type="text" class="form-control" placeholder="Your Fathers name"> -->
                                         </div>
                                         <div class="form-group">
-                                            <input type="email" class="form-control" placeholder="Your email" required="true">
+                                            Your Full Name :
+                                            <input type="text" name="person_name" class="form-control" placeholder="Full Name" required="true">
+                                        </div>
+                                         <div class="form-group">
+                                            Estimated Employee Strength Of Your Company :
+                                            <input type="number" name="company_employee_strength" class="form-control width30" placeholder="No of Employee" required="true">
                                         </div>
                                         <div class="form-group">
                                             <textarea cols="30" rows="10" class="form-control" placeholder="Your message"></textarea>
