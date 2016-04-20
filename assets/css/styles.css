@@ -1119,3 +1119,11 @@ form .form-control:focus {
       -ms-transform: rotate(-10deg);
           transform: rotate(-10deg);
 }
+
+.alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    padding-top: 50px  !important;
+    padding-bottom: 50px !important;
+}

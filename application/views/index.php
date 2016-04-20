@@ -84,7 +84,7 @@
                             </li>
                             <li><a class="getApp" href="#getApp">get app</a>
                             </li>
-                            <li><a href="#support">support</a>
+                            <li><a id="supportlink" href="#support">support</a>
                             </li>
                         </ul>
                     </div>
@@ -116,7 +116,7 @@
                                     data-speed="500"
                                     data-start="700"
                                     data-easing="Power4.easeOut">
-                                    <img src="<?php echo base_url().'assets/img/freeze/Slides/hand-freeze.png'?>" alt="">
+                                    <img src="<?php echo base_url().'assets/img/freeze/Slides/hand-freeze2.png'?>" alt="">
                                 </div>
 
                                 <div class="tp-caption lfl fadeout visible-xs"
@@ -127,7 +127,7 @@
                                     data-speed="500"
                                     data-start="700"
                                     data-easing="Power4.easeOut">
-                                    <img src="<?php echo base_url().'assets/img/freeze/iphone-freeze.png'?>" alt="">
+                                    <img src="<?php echo base_url().'assets/img/freeze/iphone-freeze2.png'?>" alt="">
                                 </div>
                             </div>
 
@@ -257,22 +257,67 @@
                     <div class="col-md-12">
                         <div class="row">
                             <div class="col-md-8 col-sm-8 scrollpoint sp-effect1">
-                                <form role="form">
+                                <form action="" role="form">
+
+                                <div style="display: none" id="errorAlert" class="alert alert-danger wow bounceInLeft">
+
+                                    <h4 align="center"><strong id="errorMsg"></strong></h4>
+
+                                    
+                                </div>
 
                                 <div id="firstform">
                                     
                                         <div class="form-group">
                                         Your Company's Name :
-                                        <input type="text" name="company_name" class="form-control" placeholder="Your Company's name" required="true">
+                                        <input type="text" id="company_name" class="form-control" required="true">
                                         </div>
                                         <div class="form-group">
                                         Company's Email :
-                                        <input type="email" name="company_email" class="form-control" placeholder="Email of Company" required="true">
+                                        <input type="email" id="company_email" class="form-control" email required="true">
+                                        </div>
+                                        <div class="form-group">
+                                            Estimated Employee Strength Of Your Company :
+                                            <input type="number" id="company_employee_strength" class="form-control width30" required="true">
                                         </div>
                                         <!-- <div class="form-group">
                                             <input type="text" class="form-control" placeholder="Your email">
                                         </div> -->
-                                        <button type="submit" id="firstsubmit" class="btn btn-primary btn-lg">Submit</button>
+
+                                        <div class="form-group">
+                                        Select Country :
+                                        <select class="form-control" id="company_country" id="select" required="true">
+                                          
+                                          
+                                        </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                        Select State :
+                                        <select class="form-control" id="company_state" id="select" >
+                                          
+                                          
+                                        </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                        Select City :
+                                        <select class="form-control" id="company_city" id="select">
+                                          
+                                          
+                                        </select>
+                                        </div>
+
+                                        <!-- <div class="form-group">
+                                        You Are :
+                                        <select class="form-control" id="person_designation" id="select" required="true">
+                                          <option value="">Select</option>
+                                          <option value="employee">Employee</option>
+                                          <option value="management">Management Member</option>
+                                          <option value="owner">Owner</option>
+                                        </select> -->
+
+                                        <button type="submit" id="firstsubmit" class="btn btn-primary btn-lg">Proceed</button>
 
                                 </div>
 
@@ -281,6 +326,7 @@
                                         <div class="form-group">
                                         You Are :
                                         <select class="form-control" name="person_designation" id="select">
+                                          <option value="">Select</option>
                                           <option value="employee">Employee</option>
                                           <option value="management">Management Member</option>
                                           <option value="owner">Owner</option>
@@ -291,16 +337,18 @@
                                             Your Full Name :
                                             <input type="text" name="person_name" class="form-control" placeholder="Full Name" required="true">
                                         </div>
-                                         <div class="form-group">
-                                            Estimated Employee Strength Of Your Company :
-                                            <input type="number" name="company_employee_strength" class="form-control width30" placeholder="No of Employee" required="true">
-                                        </div>
+                                         
                                         <div class="form-group">
                                             <textarea cols="30" rows="10" class="form-control" placeholder="Your message"></textarea>
                                         </div>
                                         <button type="button" id="secondsubmitback" class="btn btn-primary btn-lg">Back</button>
-                                        <button type="submit" id="secondsubmit" class="btn btn-primary btn-lg">Submit</button>
+                                        <button type="button" id="secondsubmit" class="btn btn-primary btn-lg">Submit</button>
 
+                                </div>
+                                <div style="display: none;" id="successbox" class="alert alert-success wow bounceInRight">
+
+                                <h1 align="center"><strong id="successMsg"></strong></h1>
+                                 <h4 align="center">Use This Code In The App To Go To Your Company's Confession</h4>   
                                 </div>
                                     
                                 </form>
@@ -395,7 +443,7 @@
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-4" >
-                        <img src="<?php echo base_url().'assets/img/freeze/iphone-freeze.png'?>" class="img-responsive scrollpoint sp-effect5" alt="">
+                        <img src="<?php echo base_url().'assets/img/freeze/iphone-freeze2.png'?>" class="img-responsive scrollpoint sp-effect5" alt="">
                     </div>
                     <div class="col-md-4 col-sm-4 scrollpoint sp-effect2">
                         <div class="media feature">
@@ -549,21 +597,21 @@
                     <div class="row">
                     
 
-                        <div class="col-lg-4">
+                        <div class="col-sm-4">
                             <div class="tilt">
-                            <a href="#"><img src="<?php echo base_url().'assets/img/p01.png'?>" alt=""></a>
+                            <a href="#"><img src="<?php echo base_url().'assets/img/p05.png'?>" alt=""></a>
                             </div>
                         </div>
 
-                        <div class="col-lg-4">
+                        <div class="col-sm-4">
                             <div class="tilt">
                             <a href="#"><img src="<?php echo base_url().'assets/img/p03.png'?>" alt=""></a>
                             </div>
                         </div>
 
-                        <div class="col-lg-4">
+                        <div class="col-sm-4">
                             <div class="tilt">
-                            <a href="#"><img src="<?php echo base_url().'assets/img/p02.png'?>" alt=""></a>
+                            <a href="#"><img src="<?php echo base_url().'assets/img/p03.png'?>" alt=""></a>
                             </div>
                         </div>
 
@@ -665,7 +713,7 @@
 
 
 
-    <div class="row"> 
+    <!-- <div class="row"> 
 
     <div class="col-lg-3"></div>  
 
@@ -746,7 +794,7 @@
 
 
 <div class="col-lg-3"></div>
-    </div>
+    </div> -->
 
 
 
@@ -758,36 +806,8 @@
     <script src="<?php echo base_url().'assets/js/rs-plugin/js/jquery.themepunch.revolution.min.js'?>"></script>
     <script src="<?php echo base_url().'assets/js/waypoints.min.js'?>"></script>
     <script src="<?php echo base_url().'assets/js/scripts.js'?>"></script>
-    <script>
-        $(document).ready(function() {
-            appMaster.preLoader();
-
-            //$('#banner-pictures').show();
-
-            new WOW().init();
-
-            $('#secondform').hide();
-
-             //$('#banner-pictures').hide();
-
-             //$('#banner-pictures').fadeIn("slow");
-
-            $('#firstsubmit').click(function(){
-
-                    $('#firstform').hide();
-                    $('#secondform').fadeIn("slow");
-
-            });
-
-            $('#secondsubmitback').click(function(){
-
-                    $('#secondform').hide();
-                    $('#firstform').fadeIn("slow");
-
-
-            });
-        });
-    </script>
+    <script src="<?php echo base_url().'assets/js/index.js'?>"></script>
+    
 </body>
 
 </html>
