@@ -15,7 +15,7 @@ class MailController extends CI_Controller {
 		$to = $this->input->post('to');
 		$subject = $this->input->post('subject');
 		$email_body = $this->input->post('body');
-		$this->email->from($from, 'Corporate Confession Admin');
+		$this->email->from($from);
 		$this->email->to($to); 
 		$this->email->subject($subject);
 		$this->email->message($email_body);	
