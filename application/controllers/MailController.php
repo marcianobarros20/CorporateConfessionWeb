@@ -6,20 +6,21 @@ class MailController extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->helper('url');
+		$this->load->helper('email');
 		$this->load->library('email');
 	}
 
 	public function sendEmail() {
-		$from = $this->input->post('from');
 		$to = $this->input->post('to');
 		$subject = $this->input->post('subject');
-		$email_body = $this->input->post('body');
-		$this->email->from($from);
+		$message = $this->input->post('body');
+		$headers = $this->input->post('from');
+		/*$this->email->from($from);
 		$this->email->to($to); 
 		$this->email->subject($subject);
 		$this->email->message($email_body);	
-		$status = $this->email->send();
+		$status = $this->email->send();*/
+		$status = mail($to,$subject,$message,$headers);
 		print_r($status);
 	}
 }
