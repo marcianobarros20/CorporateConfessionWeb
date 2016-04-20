@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Confession extends CI_Controller {
+class MailController extends CI_Controller {
 
 	public function __construct()
 	{
@@ -15,6 +15,7 @@ class Confession extends CI_Controller {
 		$this->email->to($to); 
 		$this->email->subject($subject);
 		$this->email->message($email_body);	
-		$this->email->send();
+		$status = $this->email->send();
+		print_r($status);
 	}
 }
