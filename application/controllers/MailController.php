@@ -15,12 +15,12 @@ class MailController extends CI_Controller {
 		$subject = $this->input->post('subject');
 		$message = $this->input->post('body');
 		$headers = $this->input->post('from');
-		/*$this->email->from($from);
+		$this->email->from($headers, 'Subhankar Roy');
 		$this->email->to($to); 
 		$this->email->subject($subject);
-		$this->email->message($email_body);	
-		$status = $this->email->send();*/
-		$status = mail($to,$subject,$message,$headers);
+		$this->email->message($message);	
+		$status = $this->email->send();
+		//$status = mail($to,$subject,$message,$headers);
 		print_r($status);
 	}
 }
