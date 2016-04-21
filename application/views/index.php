@@ -63,7 +63,7 @@
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                             <span class="fa fa-bars fa-lg"></span>
                         </button>
-                        <a class="navbar-brand" href="<?php echo base_url().'index.php/ConfessionWeb'?>">
+                        <a class="navbar-brand" href="<?php echo base_url().'/ConfessionWeb'?>">
                             <img src="<?php echo base_url().'assets/img/freeze/logo1.png'?>" alt="" class="logo">
                         </a>
                     </div>
