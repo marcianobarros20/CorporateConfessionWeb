@@ -49,5 +49,12 @@ class ConfessionModel extends CI_Model {
 
 	}
 
+	public function getDetailsOfID($data)
+	{
+		$result = $this->db->get_where('company_info_tbl',$data);
+
+		return $result->result_array();
+	}
+
 
 }

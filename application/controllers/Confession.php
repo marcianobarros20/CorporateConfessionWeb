@@ -170,6 +170,17 @@ public function fetchComment()
 	}
 }
 
+public function getDetailsOfID()
+{
+	$data['registered_code'] = $this->input->post('code');
+
+	$result = $this->ConfessionModel->getDetailsOfID($data);
+
+	echo json_encode($result);
+}
+
+
+
 
 
 
