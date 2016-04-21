@@ -105,6 +105,10 @@ $(document).ready(function() {
             	 company_country = $('#company_country').val();
             	 company_state = $('#company_state').val();
             	 company_city = $('#company_city').val();
+
+            	 validemail = ValidateEmail(company_email);
+            	 
+            	 //return false;
             	 /*person_designation = $('#person_designation').val();*/
 
             	//alert(company_country);
@@ -115,6 +119,20 @@ $(document).ready(function() {
             		$('#errorAlert').show();
             		$('#supportlink').click();
             		$('#errorMsg').text('All Fields Are Mandatory');
+            		return false;
+            	}
+            	else if(company_email!="" && validemail==false)
+            	{
+            		$('#errorAlert').show();
+            		$('#supportlink').click();
+            		$('#errorMsg').text('Insert A Valid Email');
+            		return false;
+            	}
+            	else if(isNaN(company_employee_strength))
+            	{
+            		$('#errorAlert').show();
+            		$('#supportlink').click();
+            		$('#errorMsg').text('Employee Strength Must Be A Number');
             	}
             	else
             	{

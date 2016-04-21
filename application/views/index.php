@@ -279,7 +279,7 @@
                                         </div>
                                         <div class="form-group">
                                             Estimated Employee Strength Of Your Company :
-                                            <input type="number" id="company_employee_strength" class="form-control width30" required="true">
+                                            <input type="text" id="company_employee_strength" class="form-control width30" required="true">
                                         </div>
                                         <!-- <div class="form-group">
                                             <input type="text" class="form-control" placeholder="Your email">
@@ -318,11 +318,11 @@
                                           <option value="owner">Owner</option>
                                         </select> -->
 
-                                        <button type="submit" id="firstsubmit" class="btn btn-primary btn-lg">Proceed</button>
+                                        <button type="button" id="firstsubmit" class="btn btn-primary btn-lg">Proceed</button>
 
                                 </div>
 
-                                <div id="secondform">
+                              <!--   <div id="secondform">
                                     
                                         <div class="form-group">
                                         You Are :
@@ -332,7 +332,7 @@
                                           <option value="management">Management Member</option>
                                           <option value="owner">Owner</option>
                                         </select>
-                                        <!-- <input type="text" class="form-control" placeholder="Your Fathers name"> -->
+                                        
                                         </div>
                                         <div class="form-group">
                                             Your Full Name :
@@ -345,7 +345,7 @@
                                         <button type="button" id="secondsubmitback" class="btn btn-primary btn-lg">Back</button>
                                         <button type="button" id="secondsubmit" class="btn btn-primary btn-lg">Submit</button>
 
-                                </div>
+                                </div> -->
                                 <div style="display: none;" id="successbox" class="alert alert-success wow bounceInRight">
 
                                 <h1 align="center"><strong id="successMsg"></strong></h1>
