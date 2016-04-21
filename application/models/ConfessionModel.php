@@ -9,10 +9,10 @@ class ConfessionModel extends CI_Model {
          $this->load->database();
       } 
 
-	public function index()
+	public function index($data)
 	{
 		//asc");
-		 $result = $this->db->order_by("tbl_id", "desc")->get('tbl_feed');
+		 $result = $this->db->order_by("tbl_id", "desc")->get_where('tbl_feed',$data);
 		 //$result->propertime = "propertime";
 
       	 return $result->result_array();

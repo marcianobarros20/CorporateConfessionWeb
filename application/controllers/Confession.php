@@ -18,10 +18,10 @@ class Confession extends CI_Controller {
 		//$result = $this->ConfessionModel->index();
 
 		//print_r($result);
-		$data['name'] = "kingsuk";
-		$data['pass'] = "king";
+		$data['company_id'] = $this->input->post('company_id');
+		
 		//$result['id'] = 3;
-		$result = $this->ConfessionModel->index();
+		$result = $this->ConfessionModel->index($data);
 		//echo "<pre>";
 		//print_r($result);
 
@@ -52,6 +52,7 @@ class Confession extends CI_Controller {
 		$data['avatar'] = $this->input->post('avatar');
 		$data['time'] = date("Y-m-d H:i:s");
 		//echo json_encode($data);
+		$data['company_id'] = $this->input->post('company_id');
 		$result = $this->ConfessionModel->postConfession($data);
 //		echo $result;
 //exit;
@@ -175,8 +176,16 @@ public function getDetailsOfID()
 	$data['registered_code'] = $this->input->post('code');
 
 	$result = $this->ConfessionModel->getDetailsOfID($data);
-
+	if($result)
+	{
+		
+	
 	echo json_encode($result);
+	}
+	else
+	{
+		echo "no response";
+	}
 }
 
 
