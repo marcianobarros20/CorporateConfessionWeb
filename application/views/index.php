@@ -45,7 +45,7 @@
 
     <div class="pre-loader">
         <div class="load-con">
-            <img src="<?php echo base_url().'assets/img/freeze/logo.png'?>" class="animated fadeInDown" alt="">
+            <img src="<?php echo base_url().'assets/img/freeze/logo1.png'?>" class="animated fadeInDown" alt="">
             <div class="spinner">
               <div class="bounce1"></div>
               <div class="bounce2"></div>
@@ -63,8 +63,8 @@
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                             <span class="fa fa-bars fa-lg"></span>
                         </button>
-                        <a class="navbar-brand" href="index.html">
-                            <img src="<?php echo base_url().'assets/img/freeze/logo.png'?>" alt="" class="logo">
+                        <a class="navbar-brand" href="<?php echo base_url().'index.php/ConfessionWeb'?>">
+                            <img src="<?php echo base_url().'assets/img/freeze/logo1.png'?>" alt="" class="logo">
                         </a>
                     </div>
 
@@ -74,18 +74,19 @@
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="#about">about</a>
                             </li>
+                            <li><a id="supportlink" href="#support">Create Unique ID</a>
+                            </li>
                             <li><a href="#features">features</a>
                             </li>
-                            <li><a href="#reviews">reviews</a>
+                            <<!-- li><a href="#reviews">reviews</a>
                             </li>
                             <li><a href="#screens">screens</a>
-                            </li>
+                            </li> -->
                             <li><a href="#demo">demo</a>
                             </li>
                             <li><a class="getApp" href="#getApp">get app</a>
                             </li>
-                            <li><a id="supportlink" href="#support">support</a>
-                            </li>
+                            
                         </ul>
                     </div>
                     <!-- /.navbar-collapse -->
@@ -145,14 +146,14 @@
                             <div class="row">
                                 
                                     <div class="tp-caption large_white_bold sft wow bounceInDown" data-x="550" data-y="center" data-hoffset="0" data-voffset="-80" data-speed="500" data-start="1200" data-easing="Power4.easeOut">
-                                    Oleose App
+                                    Corporate
                                 </div>
                                 
                             </div>
                              <div class="row">
                                 
                                 <div class="tp-caption large_white_light sfb wow bounceInRight" data-x="550" data-y="center" data-hoffset="0" data-voffset="0" data-speed="1000" data-start="1500" data-easing="Power4.easeOut">
-                                    Landing Theme
+                                    Confession
                                 </div>
 
                                 
@@ -208,9 +209,9 @@
             <div class="container">
                 
                 <div class="section-heading scrollpoint sp-effect3">
-                    <h1>About Us</h1>
+                    <h1>About The App</h1>
                     <div class="divider"></div>
-                    <p>Oleose Beautiful App Landing Page</p>
+                    <!-- <p>Oleose Beautiful App Landing Page</p> -->
                 </div>
 
                 <div class="row">
@@ -218,28 +219,28 @@
                         <div class="about-item scrollpoint sp-effect2">
                             <i class="fa fa-download fa-2x"></i>
                             <h3>Easy setup</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                            <p>Register your company here. Get the unique code. Download the app. Use the code to go to your company's confession.</p>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-3 col-xs-6" >
                         <div class="about-item scrollpoint sp-effect5">
                             <i class="fa fa-mobile fa-2x"></i>
                             <h3>On-the-go</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                            <p>Mobile App to let you read , comment and make confession any time anywhere.</p>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-3 col-xs-6" >
                         <div class="about-item scrollpoint sp-effect5">
                             <i class="fa fa-users fa-2x"></i>
-                            <h3>Social connect</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                            <h3>Connect To Employees</h3>
+                            <p>Connect to employees. Get to know what they think. What are the things they like and dislike in your company.</p>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-3 col-xs-6" >
                         <div class="about-item scrollpoint sp-effect1">
-                            <i class="fa fa-sliders fa-2x"></i>
-                            <h3>Dedicated support</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                            <i class="fa fa-male fa-2x"></i>
+                            <h3>Be Anonymous</h3>
+                            <p>Employees who will post or comment on confession they can be totally anonymus. So they can share things to management what they do not think they can share personally.</p>
                         </div>
                     </div>
                 </div>
@@ -249,9 +250,9 @@
         <section id="support" class="doublediagonal">
             <div class="container">
                 <div class="section-heading scrollpoint sp-effect3">
-                    <h1>Support</h1>
+                    <h1>Create ID</h1>
                     <div class="divider"></div>
-                    <p>For more info and support, contact us!</p>
+                    <p>Create Unique ID for Your Company To Give Access To Your Company's Employee!</p>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
@@ -354,21 +355,25 @@
                                 </form>
                             </div>
                             <div class="col-md-4 col-sm-4 contact-details scrollpoint sp-effect2">
+                                <div>
+                                    <h3>Contact Tier5 For More Cool Apps And Websites Like This</h3>
+                                </div>
                                 <div class="media">
                                     <a class="pull-left">
-                                        <i class="fa fa-map-marker fa-2x"></i>
+                                        <i class="fa fa-globe fa-2x"></i>
                                     </a>
                                     <div class="media-body">
-                                        <h4 class="media-heading">4, Some street, California, USA</h4>
+                                        <h4 class="media-heading"><a href="https://tier5.us">tier5.us</a></h4>
                                     </div>
                                 </div>
+                                
                                 <div class="media">
                                     <a class="pull-left" href="#" >
                                         <i class="fa fa-envelope fa-2x"></i>
                                     </a>
                                     <div class="media-body">
                                         <h4 class="media-heading">
-                                            <a href="mailto:support@oleose.com">support@oleose.com</a>
+                                            <a href="mailto:hello@tier5.us">hello@tier5.us</a>
                                         </h4>
                                     </div>
                                 </div>
@@ -377,7 +382,7 @@
                                         <i class="fa fa-phone fa-2x"></i>
                                     </a>
                                     <div class="media-body">
-                                        <h4 class="media-heading">+1 234 567890</h4>
+                                        <h4 class="media-heading">+1 812 722 4722</h4>
                                     </div>
                                 </div>
                             </div>
@@ -401,17 +406,17 @@
                                 <i class="fa fa-cogs fa-2x"></i>
                             </a>
                             <div class="media-body">
-                                <h3 class="media-heading">User Settings</h3>
-                                Lorem ipsum dolor sit amet.
+                                <h3 class="media-heading">Unique ID</h3>
+                                Create unique Id fro your company so no one out side of your company can access that.
                             </div>
                         </div>
                         <div class="media text-right feature">
-                            <a class="pull-right" href="#">
+                            <!-- <a class="pull-right" href="#">
                                 <i class="fa fa-envelope fa-2x"></i>
-                            </a>
+                            </a> -->
                             <div class="media-body">
-                                <h3 class="media-heading">Messages Inbox</h3>
-                                Lorem ipsum dolor sit amet.
+                                <!-- <h3 class="media-heading">Messages Inbox</h3>
+                                Lorem ipsum dolor sit amet. -->
                             </div>
                         </div>
                         <div class="media text-right feature">
@@ -419,26 +424,26 @@
                                 <i class="fa fa-users fa-2x"></i>
                             </a>
                             <div class="media-body">
-                                <h3 class="media-heading">Friends List</h3>
-                                Lorem ipsum dolor sit amet.
+                                <h3 class="media-heading">Connect To All</h3>
+                                Connect to all of your employees.
                             </div>
                         </div>
                         <div class="media text-right feature">
-                            <a class="pull-right" href="#">
+                            <!-- <a class="pull-right" href="#">
                                 <i class="fa fa-comments fa-2x"></i>
-                            </a>
+                            </a> -->
                             <div class="media-body">
-                                <h3 class="media-heading">Live Chat Messages</h3>
-                                Lorem ipsum dolor sit amet.
+                                <!-- <h3 class="media-heading">Live Chat Messages</h3>
+                                Lorem ipsum dolor sit amet. -->
                             </div>
                         </div>
                         <div class="media text-right feature">
                             <a class="pull-right" href="#">
-                                <i class="fa fa-calendar fa-2x"></i>
+                                <i class="fa fa-question-circle fa-2x"></i>
                             </a>
                             <div class="media-body">
-                                <h3 class="media-heading">Calendar / Planner</h3>
-                                Lorem ipsum dolor sit amet.
+                                <h3 class="media-heading">Be Anonymous</h3>
+                                Be totally anonymous.
                             </div>
                         </div>
                     </div>
@@ -448,20 +453,20 @@
                     <div class="col-md-4 col-sm-4 scrollpoint sp-effect2">
                         <div class="media feature">
                             <a class="pull-left" href="#">
-                                <i class="fa fa-map-marker fa-2x"></i>
+                                <i class="fa fa-male fa-2x"></i>
                             </a>
                             <div class="media-body">
-                                <h3 class="media-heading">My Places</h3>
-                                Lorem ipsum dolor sit amet.
+                                <h3 class="media-heading">Choose Avatar</h3>
+                                You can be any of the given three avatar.
                             </div>
                         </div>
                         <div class="media feature">
-                            <a class="pull-left" href="#">
+                            <!-- <a class="pull-left" href="#">
                                 <i class="fa fa-film fa-2x"></i>
-                            </a>
+                            </a> -->
                             <div class="media-body">
-                                <h3 class="media-heading">Media Player™</h3>
-                                Lorem ipsum dolor sit amet.
+                                <!-- <h3 class="media-heading">Media Player™</h3>
+                                Lorem ipsum dolor sit amet. -->
                             </div>
                         </div>
                         <div class="media feature">
@@ -469,26 +474,26 @@
                                 <i class="fa fa-compass fa-2x"></i>
                             </a>
                             <div class="media-body">
-                                <h3 class="media-heading">Intuitive Statistics</h3>
-                                Lorem ipsum dolor sit amet.
+                                <h3 class="media-heading">Give A Name</h3>
+                                You can choose a name to give to yourself.
                             </div>
                         </div>
                         <div class="media feature">
-                            <a class="pull-left" href="#">
+                            <!-- <a class="pull-left" href="#">
                                 <i class="fa fa-picture-o fa-2x"></i>
-                            </a>
+                            </a> -->
                             <div class="media-body">
-                                <h3 class="media-heading">Weather on-the-go</h3>
-                                Lorem ipsum dolor sit amet.
+                                <!-- <h3 class="media-heading">Weather on-the-go</h3>
+                                Lorem ipsum dolor sit amet. -->
                             </div>
                         </div>
                         <div class="media active feature">
                             <a class="pull-left" href="#">
-                                <i class="fa fa-plus fa-2x"></i>
+                                <i class="fa fa-comments fa-2x"></i>
                             </a>
                             <div class="media-body">
-                                <h3 class="media-heading">And much more!</h3>
-                                Lorem ipsum dolor sit amet.
+                                <h3 class="media-heading">Comments</h3>
+                                You can select and comment on any confession you want.
                             </div>
                         </div>
                     </div>
@@ -599,13 +604,13 @@
 
                         <div class="col-sm-4">
                             <div class="tilt">
-                            <a href="#"><img src="<?php echo base_url().'assets/img/p05.png'?>" alt=""></a>
+                            <a href="#"><img src="<?php echo base_url().'assets/img/p01.png'?>" alt=""></a>
                             </div>
                         </div>
 
                         <div class="col-sm-4">
                             <div class="tilt">
-                            <a href="#"><img src="<?php echo base_url().'assets/img/p03.png'?>" alt=""></a>
+                            <a href="#"><img src="<?php echo base_url().'assets/img/p02.png'?>" alt=""></a>
                             </div>
                         </div>
 
@@ -656,7 +661,7 @@
                 <div class="section-heading inverse scrollpoint sp-effect3">
                     <h1>Get App</h1>
                     <div class="divider"></div>
-                    <p>Choose your native platform and get started!</p>
+                    <!-- <p>Choose your native platform and get started!</p> -->
                 </div>
                 
                 <div class="row">
@@ -671,11 +676,11 @@
                                 <b>Android</b>
                             </a>
                             
-                                <a href="#" class="btn btn-primary inverse scrollpoint sp-effect2">
+                                <!-- <a href="#" class="btn btn-primary inverse scrollpoint sp-effect2">
                                     <i class="fa fa-apple fa-3x pull-left"></i>
                                     <span>Download for</span><br>
                                     <b>Apple IOS</b>
-                                </a>
+                                </a> -->
                         </div>
 
                     </div>
@@ -691,16 +696,16 @@
         <footer>
             <div class="container">
                 <a href="#" class="scrollpoint sp-effect3">
-                    <img src="<?php echo base_url().'assets/img/freeze/logo.png'?>" alt="" class="logo">
+                    <img src="<?php echo base_url().'assets/img/freeze/logo1.png'?>" alt="" class="logo">
                 </a>
                 <div class="social">
-                    <a href="#" class="scrollpoint sp-effect3"><i class="fa fa-twitter fa-lg"></i></a>
-                    <a href="#" class="scrollpoint sp-effect3"><i class="fa fa-google-plus fa-lg"></i></a>
-                    <a href="#" class="scrollpoint sp-effect3"><i class="fa fa-facebook fa-lg"></i></a>
+                    <a href="#" class="scrollpoint sp-effect3"><i class="fa fa-envelope fa-lg"></i></a>
+                    <a href="https://www.facebook.com/tier5development/" class="scrollpoint sp-effect3"><i class="fa fa-facebook fa-lg"></i></a>
+                    <a href="#" class="scrollpoint sp-effect3"><i class="fa fa-skype fa-lg"></i></a>
                 </div>
                 <div class="rights">
-                    <p>Copyright &copy; 2014</p>
-                    <p>Template by <a href="http://www.scoopthemes.com" target="_blank">ScoopThemes</a></p>
+                    <p>Copyright © 2015 Tier5. All Rights Reserved.</p>
+                    
                 </div>
             </div>
         </footer>

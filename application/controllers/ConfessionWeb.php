@@ -51,7 +51,7 @@ class ConfessionWeb extends CI_Controller {
 		$data['company_state'] = $this->input->post('company_state');
 		$data['company_city'] = $this->input->post('company_city');
 
-		$data['registered_code'] = substr(strtoupper(str_replace(' ', '', $data['company_name'])),0,5)."TIER5".rand(101,1000);
+		$data['registered_code'] = substr(strtoupper(str_replace(' ', '', $data['company_name'])),0,5)."TIER5".rand(101,10000);
 
 		$result = $this->ConfessionWebModel->registerCompany($data);
 
