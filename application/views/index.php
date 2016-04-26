@@ -210,6 +210,7 @@
                 
                 <div class="section-heading scrollpoint sp-effect3">
                     <h1>About The App</h1>
+                    <h4>Post and Share Anonymous Confession About Your Office or Workday with Corporate Confession</h4>
                     <div class="divider"></div>
                     <!-- <p>Oleose Beautiful App Landing Page</p> -->
                 </div>
@@ -219,28 +220,28 @@
                         <div class="about-item scrollpoint sp-effect2">
                             <i class="fa fa-download fa-2x"></i>
                             <h3>Easy setup</h3>
-                            <p>Register your company here. Get the unique code. Download the app. Use the code to go to your company's confession.</p>
+                            <p>Register with your company name and get a unique code. Download the app and use code to visit your company's confession portal.</p>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-3 col-xs-6" >
                         <div class="about-item scrollpoint sp-effect5">
                             <i class="fa fa-mobile fa-2x"></i>
                             <h3>On-the-go</h3>
-                            <p>Mobile App to let you read , comment and make confession any time anywhere.</p>
+                            <p>Read, comment or post your confession on the go.</p>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-3 col-xs-6" >
                         <div class="about-item scrollpoint sp-effect5">
                             <i class="fa fa-users fa-2x"></i>
                             <h3>Connect To Employees</h3>
-                            <p>Connect to employees. Get to know what they think. What are the things they like and dislike in your company.</p>
+                            <p>Stay connected with your employees and know their true likes and dislikes.</p>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-3 col-xs-6" >
                         <div class="about-item scrollpoint sp-effect1">
                             <i class="fa fa-male fa-2x"></i>
                             <h3>Be Anonymous</h3>
-                            <p>Employees who will post or comment on confession they can be totally anonymus. So they can share things to management what they do not think they can share personally.</p>
+                            <p>Post or comment anonymously. Share views about management without revealing your identity.</p>
                         </div>
                     </div>
                 </div>
@@ -407,7 +408,7 @@
                             </a>
                             <div class="media-body">
                                 <h3 class="media-heading">Unique ID</h3>
-                                Create unique Id fro your company so no one out side of your company can access that.
+                                Get Unique Portal for your Company and share with your employee.
                             </div>
                         </div>
                         <div class="media text-right feature">
@@ -425,7 +426,7 @@
                             </a>
                             <div class="media-body">
                                 <h3 class="media-heading">Connect To All</h3>
-                                Connect to all of your employees.
+                                Stay connected to your employee and co-workers.
                             </div>
                         </div>
                         <div class="media text-right feature">
@@ -443,7 +444,7 @@
                             </a>
                             <div class="media-body">
                                 <h3 class="media-heading">Be Anonymous</h3>
-                                Be totally anonymous.
+                                Post your confessions anonymously.
                             </div>
                         </div>
                     </div>
@@ -456,8 +457,9 @@
                                 <i class="fa fa-male fa-2x"></i>
                             </a>
                             <div class="media-body">
-                                <h3 class="media-heading">Choose Avatar</h3>
-                                You can be any of the given three avatar.
+                                <h3 class="media-heading">Pick your Avatar</h3>
+                                Pick from any three avatar (Male, Female and Anonymous) to post or comment.
+
                             </div>
                         </div>
                         <div class="media feature">
@@ -474,8 +476,8 @@
                                 <i class="fa fa-compass fa-2x"></i>
                             </a>
                             <div class="media-body">
-                                <h3 class="media-heading">Give A Name</h3>
-                                You can choose a name to give to yourself.
+                                <h3 class="media-heading">Choose your Name</h3>
+                                Pick your name for your avatar. 
                             </div>
                         </div>
                         <div class="media feature">
@@ -493,7 +495,7 @@
                             </a>
                             <div class="media-body">
                                 <h3 class="media-heading">Comments</h3>
-                                You can select and comment on any confession you want.
+                                Select and comment on your choice of confession.
                             </div>
                         </div>
                     </div>
