@@ -218,7 +218,31 @@ public function getCommentReply()
 {
 	$data['comment_id_fk'] = $this->input->post('comment_id_fk');
 	$result = $this->ConfessionModel->getCommentReply($data);
-	echo json_encode($result);
+
+	$i=0;
+		foreach ($result as $key)
+		{
+			$time = strtotime($key['reply_time']);
+			$time1=$this->time_elapsed_string($time);
+			
+			$result[$i]['propertime'] = $time1;
+
+			$i++;
+			
+		}
+
+	
+
+	if($result)
+	{
+		//print_r($result);
+		echo json_encode($result);
+	}
+	else
+	{
+		echo "no result";
+	}
+	//echo json_encode($result);
 }
 
 public function postCommentReply()
