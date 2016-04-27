@@ -214,6 +214,25 @@ public function getDetailsOfID()
 	}
 }
 
+public function getCommentReply()
+{
+	$data['comment_id_fk'] = $this->input->post('comment_id_fk');
+	$result = $this->ConfessionModel->getCommentReply($data);
+	echo json_encode($result);
+}
+
+public function postCommentReply()
+{
+	$data['reply_name'] = $this->input->post('reply_name');
+	$data['reply_msg'] = $this->input->post('reply_msg');
+	$data['reply_time'] = date("Y-m-d H:i:s");
+	$data['comment_id_fk'] = $this->input->post('comment_id_fk');
+	$data['avatar'] = $this->input->post('avatar');
+
+	$result = $this->ConfessionModel->postCommentReply($data);
+	echo $result;
+}
+
 
 
 

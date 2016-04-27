@@ -56,5 +56,16 @@ class ConfessionModel extends CI_Model {
 		return $result->result_array();
 	}
 
+	public function getCommentReply($data)
+	{
+		$result = $this->db->get_where('tbl_comment_reply',$data);
+		return $result->result_array();
+	}
+	public function postCommentReply($data)
+	{
+		$result = $this->db->insert('tbl_comment_reply',$data);
+		return $result;
+	}
+
 
 }
