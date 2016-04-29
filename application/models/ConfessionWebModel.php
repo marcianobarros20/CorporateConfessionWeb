@@ -34,6 +34,14 @@ class ConfessionWebModel extends CI_Model {
 		$result = $this->db->insert('company_info_tbl',$data);
 
 		return $result;
+	}
+
+	public function searchCompany($data)
+	{
+		$this->db->select('company_name,tbl_id,company_logo');
+		$this->db->from('company_info_tbl');
+		$this->db->like('company_name', $data['company_name'],'after');
+		return $this->db->get()->result_array();
 	} 
 
 

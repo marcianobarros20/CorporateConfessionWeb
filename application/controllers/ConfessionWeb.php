@@ -69,4 +69,12 @@ class ConfessionWeb extends CI_Controller {
 		
 	}
 
+	public function searchCompany()
+	{
+		$data['company_name'] = $this->input->post('search');
+		$result = $this->ConfessionWebModel->searchCompany($data);
+
+		echo json_encode($result);
+	}
+
 }
