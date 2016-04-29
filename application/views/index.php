@@ -273,13 +273,14 @@
                                     
                                         <div class="form-group">
                                         Your Company's Name :
-                                        <input type="text" id="company_name" class="form-control" required="true">
-                                           <div class="drop-option">
-                                               <p class="drop-search">shalini<img src="assets/img/pic1.png" alt="Responsive image" class="pull-right"></p>
+                                        <input type="text" id="company_name" autocomplete="off" class="form-control" required="true">
+                                           <div class="drop-option" id="searchResult">
+                                               
+                                               
+                                               
+                                               <!-- <p class="drop-search"><a id="searchRes1">shalini</a><img src="assets/img/pic1.png" alt="Responsive image" class="pull-right"></p>
                                                <hr>
-                                               <p class="drop-search">shalini<img src="assets/img/pic1.png" alt="Responsive image" class="pull-right"></p>
-                                               <hr>
-                                               <p class="drop-search">shalini<img src="assets/img/pic1.png" alt="Responsive image" class="pull-right"></p>
+                                               <p class="drop-search"><a id="searchRes1">shalini</a><img src="assets/img/pic1.png" alt="Responsive image" class="pull-right"></p> -->
                                            </div> 
                                         </div>
 

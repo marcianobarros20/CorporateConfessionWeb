@@ -209,3 +209,60 @@ function ValidateEmail(email) {
         return expr.test(email);
     };
 //==============================================================================
+
+    function search()
+    {
+        var title=$("#company_name").val();
+ 
+        if(title!="")
+        {
+        //$("#result").html("<img alt='' src='ajax-loader.gif'/>");
+            $.post("ConfessionWeb/searchCompany",{search:title}, function(data)
+            {
+                data = JSON.parse(data);
+                console.log(data);
+                //$("#result").html(data);
+                if(data.length>0)
+                {
+                    $('.drop-option').hide();
+                    var length = data.length;
+                    
+                    loopLength  =4;
+
+                    if(loopLength>length)
+                    {
+                        loopLength = length;
+                    }
+
+                    var totaldiv = "";
+                    for(i=0;i<loopLength;i++)
+                    {
+                        totaldiv +="<p id='"+data[i].tbl_id+"' onclick='searchClick("+data[i].tbl_id+")' class='drop-search'>"+data[i].company_name+"<img src='"+data[i].company_logo+"' alt='Responsive image' class='pull-right'></p><hr>";
+                    }
+                    $('#searchResult').html(totaldiv);
+                    $('.drop-option').show();
+                }
+                else
+                {
+                    $('.drop-option').hide();
+                }
+            });
+        }
+    }
+
+                 $('#company_name').keyup(function(e) {
+                    //alert('hello');
+                    if(e.keyCode == 8)
+                    {
+                        $('.drop-option').hide();
+                        //alert('backspace trapped')
+                    }
+                    $('#searchResult').html("");
+                    
+                      search();
+                  });
+//==================================SEARCH RESULT CLICK EVENT=====================
+    function searchClick(tbl_id)
+    {
+        alert(tbl_id);
+    }
