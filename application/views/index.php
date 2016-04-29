@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="<?php echo base_url().'assets/css/font-awesome.min.css'?>">
     <link rel="stylesheet" href="<?php echo base_url().'assets/css/slick.css'?>">
     <link rel="stylesheet" href="<?php echo base_url().'assets/js/rs-plugin/css/settings.css'?>">
+    <link rel="stylesheet" href="<?php echo base_url().'assets/css/confession.css'?>">
 
     <link rel="stylesheet" href="<?php echo base_url().'assets/css/styles.css'?>">
 
@@ -273,7 +274,15 @@
                                         <div class="form-group">
                                         Your Company's Name :
                                         <input type="text" id="company_name" class="form-control" required="true">
+                                           <div class="drop-option">
+                                               <p class="drop-search">shalini<img src="assets/img/pic1.png" alt="Responsive image" class="pull-right"></p>
+                                               <hr>
+                                               <p class="drop-search">shalini<img src="assets/img/pic1.png" alt="Responsive image" class="pull-right"></p>
+                                               <hr>
+                                               <p class="drop-search">shalini<img src="assets/img/pic1.png" alt="Responsive image" class="pull-right"></p>
+                                           </div> 
                                         </div>
+
                                         <div class="form-group">
                                         Company's Email :
                                         <input type="email" id="company_email" class="form-control" email required="true">
