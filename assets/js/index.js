@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    var imageBASE="";
             
     appMaster.preLoader();
     new WOW().init();
@@ -7,10 +8,25 @@ $(document).ready(function() {
             //$('#banner-pictures').show();
  //====================================================================================
 
- 		function completeAndRedirect()
- 		{
- 			//alert('hii');
- 		}
+         function EL(id) { return document.getElementById(id); } // Get el by ID helper function
+
+        function readFile() {
+          if (this.files && this.files[0]) {
+            var FR= new FileReader();
+            FR.onload = function(e) {
+                imageBASE = e.target.result;
+              //EL("img").src       = e.target.result;
+              //EL("b64").innerHTML = e.target.result;
+              //console.log(e.target.result);
+            };       
+            FR.readAsDataURL( this.files[0] );
+          }
+        }
+            /*$('#btn').click(function(){
+                console.log(image);
+            });*/
+
+        EL("inp").addEventListener("change", readFile, false);
 
 //=======================================================================================
     $.post('ConfessionWeb/getCountry', function(data){
@@ -113,7 +129,7 @@ $(document).ready(function() {
 
             	//alert(company_country);
 
-               	if($.trim(company_name)=="" || $.trim(company_email)=="" ||$.trim(company_employee_strength)=="" ||$.trim(company_country)=="" ||$.trim(company_state)=="" ||$.trim(company_city)=="" /*||$.trim(person_designation)==""*/)
+               	if($.trim(company_name)=="" || $.trim(company_email)=="" ||$.trim(company_employee_strength)=="" ||$.trim(company_country)=="" ||$.trim(company_state)=="" ||$.trim(company_city)=="" ||$.trim(imageBASE)==""/*||$.trim(person_designation)==""*/)
             	{
             		//alert(company_name);
             		$('#errorAlert').show();
@@ -136,10 +152,11 @@ $(document).ready(function() {
             	}
             	else
             	{
-            		$.post('ConfessionWeb/registerCompany',{company_name: company_name,company_email: company_email,company_employee_strength: company_employee_strength, company_country: company_country, company_state: company_state, company_city: company_city} ,function(data){
+            		$.post('ConfessionWeb/registerCompany',{company_name: company_name,company_email: company_email,company_employee_strength: company_employee_strength, company_country: company_country, company_state: company_state, company_city: company_city,imageBASE:imageBASE} ,function(data){
 
             			if($.trim(data))
             			{
+                            //console.log(data);
             				$('#errorAlert').hide();
             				$('#firstform').hide();
             				$('#successbox').show();

@@ -287,6 +287,11 @@
                                         </div> -->
 
                                         <div class="form-group">
+                                        Please Enter The LOGO Of Your Company :
+                                        <input id="inp" type='file' required="true" >
+                                        </div>
+
+                                        <div class="form-group">
                                         Select Country :
                                         <select class="form-control" id="company_country" id="select" required="true">
                                           

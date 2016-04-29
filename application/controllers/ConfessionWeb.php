@@ -50,6 +50,8 @@ class ConfessionWeb extends CI_Controller {
 		$data['company_country'] = $this->input->post('company_country');
 		$data['company_state'] = $this->input->post('company_state');
 		$data['company_city'] = $this->input->post('company_city');
+		$data['company_logo'] = $this->input->post('imageBASE');
+		
 
 		$data['registered_code'] = substr(strtoupper(str_replace(' ', '', $data['company_name'])),0,5)."TIER5".rand(101,10000);
 
