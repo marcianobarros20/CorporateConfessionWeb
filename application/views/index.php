@@ -79,7 +79,7 @@
                             </li>
                             <li><a href="#features">features</a>
                             </li>
-                            <<!-- li><a href="#reviews">reviews</a>
+                            <!-- li><a href="#reviews">reviews</a>
                             </li>
                             <li><a href="#screens">screens</a>
                             </li> -->
@@ -169,7 +169,7 @@
                                         </div>
                                 </div>
 
-                                <div class="col-sm-4">
+                                <div class="col-sm-4 get-app-icon">
 
                                             <div class="tp-caption sfr hidden-xs" data-x="730" data-y="center" data-hoffset="0" data-voffset="85" data-speed="1500" data-start="1900" data-easing="Power4.easeOut">
                                     <a href="#getApp" class="btn btn-default btn-lg">GET APP</a>
@@ -686,7 +686,7 @@
                             <img src="<?php echo base_url().'assets/img/freeze/freeze-angled2.png'?>" alt="">
                         </div>
                         <div class="platforms">
-                            <a href="#" class="btn btn-primary inverse scrollpoint sp-effect1">
+                            <a href="https://play.google.com/store/apps/details?id=in.tier5.corporateconfession" target="_blank" class="btn btn-primary inverse scrollpoint sp-effect1">
                                 <i class="fa fa-android fa-3x pull-left"></i>
                                 <span>Download for</span><br>
                                 <b>Android</b>
@@ -715,9 +715,9 @@
                     <img src="<?php echo base_url().'assets/img/freeze/logo1.png'?>" alt="" class="logo">
                 </a>
                 <div class="social">
-                    <a href="#" class="scrollpoint sp-effect3"><i class="fa fa-envelope fa-lg"></i></a>
-                    <a href="https://www.facebook.com/tier5development/" class="scrollpoint sp-effect3"><i class="fa fa-facebook fa-lg"></i></a>
-                    <a href="#" class="scrollpoint sp-effect3"><i class="fa fa-skype fa-lg"></i></a>
+                    <a href="#" target="_blank" class="scrollpoint sp-effect3"><i class="fa fa-envelope fa-lg"></i></a>
+                    <a href="https://www.facebook.com/tier5development/" target="_blank" class="scrollpoint sp-effect3"><i class="fa fa-facebook fa-lg"></i></a>
+                    <a href="#" target="_blank" class="scrollpoint sp-effect3"><i class="fa fa-skype fa-lg"></i></a>
                 </div>
                 <div class="rights">
                     <p>Copyright © 2015 Tier5. All Rights Reserved.</p>

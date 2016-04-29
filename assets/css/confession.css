@@ -18,3 +18,83 @@
 	width: 3%;
 	height: 5%;
 }
+.navbar-brand .logo{
+	width:65%;
+}
+hr {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+/*.img-zoom-div{
+	transition: all .2s ease-in-out;
+}
+
+.img-zoom-div:hover{ transform: scale(1.1); }
+*/
+
+@media all and (max-width: 920px) {
+
+	header .navbar-default ul.navbar-nav li a{padding: 7px 13px}
+
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1023px){
+
+.navbar-brand .logo{width:60%;}
+/*header .navbar-default ul.navbar-nav {padding-top: 0px !important;}*/
+.col-sm-4.get-app-icon {
+    margin-left: 15px;
+}
+
+
+}
+
+
+
+@media all and (max-width: 768px) {
+
+#banner-pictures{width: 100%; overflow: hidden; margin: 60px auto 0 auto; text-align: center;}
+.tp-caption.large_white_bold{font-size: 45px !important;}
+.tp-caption.large_white_light{font-size: 45px !important;}
+.section-heading h1{font-size: 39px;}
+.section-heading h4{font-size: 15px; line-height: 25px;}
+section#about .about-item{min-height: 379px;}
+.tp-banner-container ul{margin: 0; padding: 0}
+
+}
+
+
+@media all and (max-width: 480px) {
+
+  section#about .about-item{width: 100% !important; float: none; min-height: 280px}
+#about .col-xs-6{width: 100% }
+
+section{padding-bottom: 0px}
+.section-heading{margin: 0px 0 37px}
+h3{font-size: 18px;}
+.section-heading p{font-size: 18px;}
+.width30 {
+    width: 100%;
+}
+.tp-caption img {
+    margin-top: 45px;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

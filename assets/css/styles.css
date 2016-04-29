@@ -442,7 +442,8 @@ section#support .media i.fa {
 }
 section#support .media .media-heading {
   padding-top: 15px;
-  font-weight: 300;
+  font-weight: 400;
+  color: #66CDCC;
 }
 section#support .media .media-heading a {
   font-weight: 400;
