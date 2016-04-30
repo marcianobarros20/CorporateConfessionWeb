@@ -188,16 +188,7 @@ $(document).ready(function() {
 
             });
 //=======================================================================================
-            $('#secondsubmit').click(function(){
-
-                $('#secondform').hide();
-
-                $('#successbox').show();
-                $('#supportlink').click();
-
-                $('#successMsg').text('!RSSOFTTIER593');
-
-            });
+            
 
 
         });
@@ -220,7 +211,7 @@ function ValidateEmail(email) {
             $.post("ConfessionWeb/searchCompany",{search:title}, function(data)
             {
                 data = JSON.parse(data);
-                console.log(data);
+                //console.log(data);
                 //$("#result").html(data);
                 if(data.length>0)
                 {
@@ -264,5 +255,51 @@ function ValidateEmail(email) {
 //==================================SEARCH RESULT CLICK EVENT=====================
     function searchClick(tbl_id)
     {
-        //alert(tbl_id);
+        
+        $('#firstform').hide();
+
+        $.post('ConfessionWeb/getCompanyDetails',{tbl_id: tbl_id} ,function(data){
+
+                        if($.trim(data))
+                        {
+                            data = JSON.parse(data);
+                            var company_name = data[0].company_name;
+                            var company_name_upper = company_name.toUpperCase();
+                            //console.log(data[0].company_name);
+                            $('#requestCompany').html("Request "+company_name_upper+"(via email) for their Unique ID");
+                            $('#company_hidden_email').val(data[0].company_name);
+                            $('#secondform').show();
+                        }
+
+                    });
+
+        
     }
+//===================================================================================
+
+    $('#secondsubmit').click(function(){
+
+        var person_name = $('#person_name').val();
+        var person_email = $('#person_email').val();
+        var person_valid_email = ValidateEmail(person_email);
+
+        if($.trim(person_name)=="" || $.trim(person_email)=="")
+        {
+            $('#errorAlert').show();
+            $('#supportlink').click();
+            $('#errorMsg').text('All Fields Are Mandatory');
+            return false;
+        }
+        else if(person_valid_email==false)
+        {
+            $('#errorAlert').show();
+            $('#supportlink').click();
+            $('#errorMsg').text('Insert A Valid Email');
+            return false;
+        }
+        else
+        {
+            alert($('#company_hidden_email').val());
+        }
+
+    });

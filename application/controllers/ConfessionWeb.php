@@ -77,4 +77,13 @@ class ConfessionWeb extends CI_Controller {
 		echo json_encode($result);
 	}
 
+	public function getCompanyDetails()
+	{
+		$data['tbl_id'] = $this->input->post('tbl_id');
+
+		$result = $this->ConfessionWebModel->getCompanyDetails($data);
+
+		echo json_encode($result);
+	}
+
 }
