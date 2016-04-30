@@ -1,3 +1,26 @@
+body{
+	cursor: pointer;
+}
+div#load_screen{
+	background-color: RGBA(0, 0, 0, 0.22);
+	opacity: 1;
+	position: fixed;
+	z-index: 10;
+	top: 70px;
+	width: 96%;
+	height: 580px;
+	display: none;
+	border-radius: 5px;
+}
+div#load_screen > div#loading{
+	color: #fff;
+	width: 120px;
+	height: 24px;
+	margin: 250px auto;
+}
+div#load_screen > div#loading .fa-spinner{
+	color: #66CDCC;
+}
 .drop-option{
 	border: 1px solid #ccc;
 	margin-top: -1px;
@@ -6,20 +29,29 @@
 	display: none;
 	height: 222px;
     overflow: hidden;
+    position: absolute;
+	z-index: 1000;
+	background-color: #66CDCC;
+	color: #fff;
+	width: 96%;
 }
 .drop-search{
 	display: inline-table;
 	cursor: pointer;
-	/*border: 1px solid #ccc;
-	margin-top: -1px;
-	border-radius: 40px;
-	padding-top: 6px;
-	padding-left: 15px;*/
+	font-weight: bold;
+	font-size: 27px;
 	width: 100%;
+	margin-top: 2%;
 }
-.drop-search img{
-	width: 3%;
+/*.drop-search img{
+	width: 5%;
 	height: 5%;
+	margin-top: 1%;
+}*/
+.drop-search img {
+    width: 8%;
+    height: 5%;
+    margin-top: 0%;
 }
 .navbar-brand .logo{
 	width:65%;
@@ -31,8 +63,18 @@ hr {
     border-top: 1px solid #eee;
 }
 .corporate-con{
-	margin-top:10%;
+	margin-top:16%;
 }
+
+.trans-img img { height: 446px; width: 228px; -webkit-transition: all 2s ease; -moz-transition: all 2s ease; -ms-transition: all 2s ease; transition: all 2s ease; } 
+.trans-img img:hover { width: 328px; height: 546px; } 
+
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 30%;
+      margin: auto;
+      height:500px;
+  }
 
 /*.img-zoom-div{
 	transition: all .2s ease-in-out;
@@ -54,7 +96,17 @@ hr {
 .col-sm-4.get-app-icon {
     margin-left: 15px;
 }
-
+.corporate-con {
+    margin-top: 25%;
+}
+.drop-option {
+    width: 94%;
+}
+.drop-search img {
+    width: 9%;
+    height: 6%;
+    margin-top: 1%;
+}
 
 }
 
@@ -87,6 +139,14 @@ h3{font-size: 18px;}
 }
 .tp-caption img {
     margin-top: 45px;
+}
+.drop-search img {
+    width: 8%;
+    height: 6%;
+    margin-top: 2%;
+}
+.drop-option {
+    width: 93%;
 }
 
 }

@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="<?php echo base_url().'assets/css/confession.css'?>">
 
     <link rel="stylesheet" href="<?php echo base_url().'assets/css/styles.css'?>">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 
@@ -141,7 +143,7 @@
                                     Confession
                                 </div>
                                 <div class="row">
-                                    <div class="col-xs-12 col-sm-5 col-md-4 wow bounceInUp">
+                                    <div class="col-xs-12 col-sm-4 col-md-4 wow bounceInUp">
                                         <div class="tp-caption sfb hidden-xs" data-x="550" data-y="center" data-hoffset="0" data-voffset="85" data-speed="1000" data-start="1700" data-easing="Power4.easeOut">
                                              <a href="#about" class="btn btn-primary inverse btn-lg">LEARN MORE</a>
                                         </div>
@@ -277,11 +279,19 @@
                     <p>Create Unique ID for Your Company To Give Access To Your Company's Employee!</p>
                 </div>
                 <div class="row">
+
+                
+
                     <div class="col-md-12">
                         <div class="row">
                             <div class="col-md-8 col-sm-8 scrollpoint sp-effect1">
                                 <form action="" role="form">
-
+                                    <div id="load_screen">
+                                        <div id="loading">
+                                            <i class="fa fa-spinner fa-pulse fa-5x fa-fw margin-bottom"></i>
+                                            <span class="sr-only">Loading...</span>
+                                        </div>
+                                    </div>
                                 <div style="display: none" id="errorAlert" class="alert alert-danger wow bounceInLeft">
 
                                     <h4 align="center"><strong id="errorMsg"></strong></h4>
@@ -357,7 +367,7 @@
                                         <button type="button" id="firstsubmit" class="btn btn-primary btn-lg">Proceed</button>
 
                                 </div>
-
+                                
                               <!--   <div id="secondform">
                                     
                                         <div class="form-group">
@@ -399,7 +409,7 @@
                                         <i class="fa fa-globe fa-2x"></i>
                                     </a>
                                     <div class="media-body">
-                                        <h4 class="media-heading"><a href="https://tier5.us">tier5.us</a></h4>
+                                        <h4 class="media-heading"><a href="https://tier5.us" target="_blank">tier5.us</a></h4>
                                     </div>
                                 </div>
                                 
@@ -409,12 +419,12 @@
                                     </a>
                                     <div class="media-body">
                                         <h4 class="media-heading">
-                                            <a href="mailto:hello@tier5.us">hello@tier5.us</a>
+                                            <a href="mailto:hello@tier5.us" target="_blank">hello@tier5.us</a>
                                         </h4>
                                     </div>
                                 </div>
                                 <div class="media">
-                                    <a class="pull-left" href="#" >
+                                    <a class="pull-left">
                                         <i class="fa fa-phone fa-2x"></i>
                                     </a>
                                     <div class="media-body">
@@ -483,7 +493,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-4" >
+                    <div class="col-md-4 col-sm-4 trans-img">
                         <img src="<?php echo base_url().'assets/img/freeze/iphone-freeze2.png'?>" class="img-responsive scrollpoint sp-effect5" alt="">
                     </div>
                     <div class="col-md-4 col-sm-4 scrollpoint sp-effect2">
@@ -636,7 +646,47 @@
                     <div class="divider"></div>
                     <p>Take a closer look in more detail</p>
 
-                    <div class="row">
+
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="assets/img/p01.png" alt="snap-short" width="460" height="345">
+      </div>
+
+      <div class="item">
+        <img src="assets/img/p02.png" alt="snap-short" width="460" height="345">
+      </div>
+    
+      <div class="item">
+        <img src="assets/img/p03.png" alt="snap-short" width="460" height="345">
+      </div>
+
+      <div class="item">
+        <img src="assets/img/p05.png" alt="snap-short" width="460" height="345">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+                    <!-- <div class="row">
                     
 
                         <div class="col-sm-4">
@@ -657,7 +707,7 @@
                             </div>
                         </div>
 
-                    </div>
+                    </div> -->
                 
 
 
@@ -849,7 +899,26 @@
     <script src="<?php echo base_url().'assets/js/waypoints.min.js'?>"></script>
     <script src="<?php echo base_url().'assets/js/scripts.js'?>"></script>
     <script src="<?php echo base_url().'assets/js/index.js'?>"></script>
-    
+    <script>
+    // window.addEventListener("load", function(){
+    //     var load_screen = document.getElementById("load_screen");
+    //     document.body.removeChild(load_screen);
+    // });
+
+    // $(document).ready(function() {
+    //    $(this).load(function() {
+    //       $('.progress').hide();
+    //       $('body').css("opacity", "1");
+    //    });
+    // });
+    $(document).ready(function() {
+       $("#firstsubmit").click(function() {
+            $("#load_screen").show();
+          //$('#load_screen').hide();
+       });
+    });
+
+    </script>
 </body>
 
 </html>
