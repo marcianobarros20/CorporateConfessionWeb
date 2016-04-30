@@ -185,6 +185,7 @@ $(document).ready(function() {
 
 
                     $('#secondform').hide();
+                    $('#errorAlert').hide();
                     $('#firstform').fadeIn("slow");
 
 
@@ -261,6 +262,7 @@ function ValidateEmail(email) {
     {
         
         $('#firstform').hide();
+        $('#errorAlert').hide();
 
         $.post('ConfessionWeb/getCompanyDetails',{tbl_id: tbl_id} ,function(data){
 
@@ -273,6 +275,7 @@ function ValidateEmail(email) {
                             $('#requestCompany').html("Request "+company_name_upper+"(via email) for their Unique ID");
                             $('#company_hidden_email').val(data[0].company_name);
                             $('#secondform').show();
+                            $('#mylink').click();
                         }
 
                     });
