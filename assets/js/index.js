@@ -264,5 +264,5 @@ function ValidateEmail(email) {
 //==================================SEARCH RESULT CLICK EVENT=====================
     function searchClick(tbl_id)
     {
-        alert(tbl_id);
+        //alert(tbl_id);
     }
