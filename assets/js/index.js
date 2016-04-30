@@ -282,6 +282,7 @@ function ValidateEmail(email) {
         var person_name = $('#person_name').val();
         var person_email = $('#person_email').val();
         var person_valid_email = ValidateEmail(person_email);
+        var company_email = $('#company_hidden_email').val();
 
         if($.trim(person_name)=="" || $.trim(person_email)=="")
         {
@@ -297,9 +298,27 @@ function ValidateEmail(email) {
             $('#errorMsg').text('Insert A Valid Email');
             return false;
         }
+        else if($.trim(company_email)=="")
+        {
+            $('#errorAlert').show();
+            $('#supportlink').click();
+            $('#errorMsg').text('Sorry This company have not provided an email id');
+            return false;
+        }
         else
         {
-            alert($('#company_hidden_email').val());
+            //alert('hii')
+            $('#errorAlert').hide();
+            $('#secondform').hide();
+            $('#supportlink').click();
+            $('#emailsuccessbox').show();
+            
+
+            $.post('MailController/sendEmail',{company_email: company_email,person_name: person_name,person_email:person_email} ,function(data){
+
+                        
+            });
+
         }
 
     });

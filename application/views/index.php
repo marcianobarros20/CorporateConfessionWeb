@@ -362,7 +362,7 @@
 
 
                                         <h1 id="requestCompany"></h1>
-                                        <div class="form-group">
+                                        
                                         <div class="form-group">
                                             Your Full Name :
                                             <input type="text" id="person_name" class="form-control" required="true">
@@ -384,6 +384,12 @@
 
                                 <h1 align="center"><strong id="successMsg"></strong></h1>
                                  <h4 align="center">Use This Code In The App To Go To Your Company's Confession</h4>   
+                                </div>
+
+                                <div style="display: none;" id="emailsuccessbox" class="alert alert-success wow bounceInRight">
+
+                                <h1 align="center"><strong>Email Sent Successfully</strong></h1>
+                                    
                                 </div>
                                     
                                 </form>

@@ -19,10 +19,10 @@ class MailController extends CI_Controller {
 		$from = $this->input->post('person_email');
 
 
-		$this->email->from($from, $name);
+		$this->email->from($from, "Corpprate Confession");
 		$this->email->to($to); 
 		$this->email->subject('Someone Just Asked You The Unique ID of Your Company For Corporate Confession App');
-		$this->email->message("<h3>This mail is sent via <a src='http://corporateconfessions.us/'>corporateconfessions.us</a></h3>.<p>The person named above have requested you to have your company's unique ID for Corporate Confessions App.If you want to share the same with the person then you can reply this email.</p>"); 	
+		$this->email->message("This mail is sent via corporateconfessions.us.".$name." have requested you to have your company's unique ID for Corporate Confessions App.If you want to share the same with the person then you can reply this email with your unique id and he will receive that and can visit and confess on you your company's portal on Corporate Confession App."); 	
 		$status = $this->email->send();
 		//$status = mail($to,$subject,$message,$headers);
 		print_r($status);
