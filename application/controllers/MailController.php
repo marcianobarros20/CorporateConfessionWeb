@@ -11,14 +11,21 @@ class MailController extends CI_Controller {
 	}
 
 	public function sendEmail() {
-		//$to = $this->input->post('to');
+		$to = $this->input->post('company_email');
+		$name = $this->input->post('person_name');
 		//$subject = $this->input->post('subject');
 		//$message = $this->input->post('body');
 		//$headers = $this->input->post('from');
-		$this->email->from('hello@tier5.in', 'kingsuk Roy');
-		$this->email->to('kingsuk.majumder@gmail.com'); 
-		$this->email->subject('Email Test');
-		$this->email->message('Testing the email class.'); 	
+		$from = $this->input->post('person_email');
+
+		/*echo $to."name".$name."from".$from;
+		die;*/
+
+
+		$this->email->from($from, "Corpprate Confession");
+		$this->email->to($to); 
+		$this->email->subject('Someone Just Asked You The Unique ID of Your Company For Corporate Confession App');
+		$this->email->message("This mail is sent via corporateconfessions.us.".$name." have requested you to have your company's unique ID for Corporate Confessions App.If you want to share the same with the person then you can reply this email with your unique id and he will receive that and can visit and confess on you your company's portal on Corporate Confession App."); 	
 		$status = $this->email->send();
 		//$status = mail($to,$subject,$message,$headers);
 		print_r($status);

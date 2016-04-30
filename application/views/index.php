@@ -367,35 +367,41 @@
                                         <button type="button" id="firstsubmit" class="btn btn-primary btn-lg">Proceed</button>
 
                                 </div>
-                                
-                              <!--   <div id="secondform">
-                                    
-                                        <div class="form-group">
-                                        You Are :
-                                        <select class="form-control" name="person_designation" id="select">
-                                          <option value="">Select</option>
-                                          <option value="employee">Employee</option>
-                                          <option value="management">Management Member</option>
-                                          <option value="owner">Owner</option>
-                                        </select>
+
+
+                                <div id="secondform">
+
+
+                                        <h1 id="requestCompany"></h1>
+
                                         
-                                        </div>
                                         <div class="form-group">
                                             Your Full Name :
-                                            <input type="text" name="person_name" class="form-control" placeholder="Full Name" required="true">
+                                            <input type="text" id="person_name" class="form-control" required="true">
                                         </div>
-                                         
-                                        <div class="form-group">
-                                            <textarea cols="30" rows="10" class="form-control" placeholder="Your message"></textarea>
-                                        </div>
-                                        <button type="button" id="secondsubmitback" class="btn btn-primary btn-lg">Back</button>
-                                        <button type="button" id="secondsubmit" class="btn btn-primary btn-lg">Submit</button>
 
-                                </div> -->
+                                        <div class="form-group">
+                                            Your Email Address :
+                                            <input type="email" id="person_email" class="form-control"  required="true">
+                                        </div>
+
+                                        <input type="hidden" id="company_hidden_email">
+                                         
+                                        
+                                        <button type="button" id="secondsubmitback" class="btn btn-primary btn-lg">Back</button>
+                                        <button type="button" id="secondsubmit" class="btn btn-primary btn-lg">Send</button>
+
+                                </div>
                                 <div style="display: none;" id="successbox" class="alert alert-success wow bounceInRight">
 
                                 <h1 align="center"><strong id="successMsg"></strong></h1>
                                  <h4 align="center">Use This Code In The App To Go To Your Company's Confession</h4>   
+                                </div>
+
+                                <div style="display: none;" id="emailsuccessbox" class="alert alert-success wow bounceInRight">
+
+                                <h1 align="center"><strong>Email Sent Successfully</strong></h1>
+                                    
                                 </div>
                                     
                                 </form>
