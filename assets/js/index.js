@@ -316,7 +316,7 @@ function ValidateEmail(email) {
 
             $.post('MailController/sendEmail',{company_email: company_email,person_name: person_name,person_email:person_email} ,function(data){
 
-                        
+                        console.log(data);
             });
 
         }

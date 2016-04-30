@@ -18,6 +18,9 @@ class MailController extends CI_Controller {
 		//$headers = $this->input->post('from');
 		$from = $this->input->post('person_email');
 
+		/*echo $to."name".$name."from".$from;
+		die;*/
+
 
 		$this->email->from($from, "Corpprate Confession");
 		$this->email->to($to); 
