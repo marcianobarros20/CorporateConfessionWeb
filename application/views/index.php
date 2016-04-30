@@ -108,7 +108,7 @@
                         <!-- LAYER NR. 1 -->
                         <div id="banner-pictures" class="row">
 
-                            <div class="col-sm-6 wow bounceInLeft">
+                            <div class="col-xs-12 col-sm-6 col-md-6 wow bounceInLeft">
                                 
                                 <div class="tp-caption lfl fadeout hidden-xs"
                                     data-x="left"
@@ -134,17 +134,37 @@
                             </div>
 
 
-                            <div class="col-sm-6">
+                            <div class="col-xs-12 col-sm-6 col-md-6 corporate-con">
+                                 <div class="tp-caption large_white_bold sft wow bounceInDown" data-x="550" data-y="center" data-hoffset="0" data-voffset="-80" data-speed="500" data-start="1200" data-easing="Power4.easeOut">
+                                 Corporate </div>
+                                 <div class="tp-caption large_white_light sfb wow bounceInRight" data-x="550" data-y="center" data-hoffset="0" data-voffset="0" data-speed="1000" data-start="1500" data-easing="Power4.easeOut">
+                                    Confession
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-5 col-md-4 wow bounceInUp">
+                                        <div class="tp-caption sfb hidden-xs" data-x="550" data-y="center" data-hoffset="0" data-voffset="85" data-speed="1000" data-start="1700" data-easing="Power4.easeOut">
+                                             <a href="#about" class="btn btn-primary inverse btn-lg">LEARN MORE</a>
+                                        </div>
+                                    </div>
 
+                                    <div class="col-xs-12 col-sm-4 col-md-4 get-app-icon">
+
+                                        <div class="tp-caption sfr hidden-xs" data-x="730" data-y="center" data-hoffset="0" data-voffset="85" data-speed="1500" data-start="1900" data-easing="Power4.easeOut">
+                                        <a href="#getApp" class="btn btn-default btn-lg">GET APP</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                           <!--  <br>
                             <br>
                             <br>
                             <br>
                             <br>
                             <br>
                             <br>
-                            <br>
-                            <br>
-                            <div class="row">
+                            <br> -->
+                           <!--  <div class="row">
                                 
                                     <div class="tp-caption large_white_bold sft wow bounceInDown" data-x="550" data-y="center" data-hoffset="0" data-voffset="-80" data-speed="500" data-start="1200" data-easing="Power4.easeOut">
                                     Corporate
@@ -163,13 +183,13 @@
                             <div class="row">
 
 
-                                <div class="col-sm-4 wow bounceInUp">
+                                <div class="col-xs-12 col-sm-5 col-md-4 wow bounceInUp">
                                         <div class="tp-caption sfb hidden-xs" data-x="550" data-y="center" data-hoffset="0" data-voffset="85" data-speed="1000" data-start="1700" data-easing="Power4.easeOut">
                                              <a href="#about" class="btn btn-primary inverse btn-lg">LEARN MORE</a>
                                         </div>
                                 </div>
 
-                                <div class="col-sm-4 get-app-icon">
+                                <div class="col-xs-12 col-sm-4 col-md-4 get-app-icon">
 
                                             <div class="tp-caption sfr hidden-xs" data-x="730" data-y="center" data-hoffset="0" data-voffset="85" data-speed="1500" data-start="1900" data-easing="Power4.easeOut">
                                     <a href="#getApp" class="btn btn-default btn-lg">GET APP</a>
@@ -179,7 +199,7 @@
                                  
                                 
 
-                            </div>
+                            </div> -->
                                 
                                 
                                 
@@ -714,7 +734,7 @@
                     <img src="<?php echo base_url().'assets/img/freeze/logo1.png'?>" alt="" class="logo">
                 </a>
                 <div class="social">
-                    <a href="#" target="_blank" class="scrollpoint sp-effect3"><i class="fa fa-envelope fa-lg"></i></a>
+                    <a href="https://tier5.us/" target="_blank" class="scrollpoint sp-effect3"><i class="fa fa-envelope fa-lg"></i></a>
                     <a href="https://www.facebook.com/tier5development/" target="_blank" class="scrollpoint sp-effect3"><i class="fa fa-facebook fa-lg"></i></a>
                     <a href="#" target="_blank" class="scrollpoint sp-effect3"><i class="fa fa-skype fa-lg"></i></a>
                 </div>
