@@ -114,6 +114,7 @@ $(document).ready(function() {
 
             $('#firstsubmit').click(function(){
 
+                
 
             	 company_name = $('#company_name').val();
             	 company_email = $('#company_email').val();
@@ -152,6 +153,8 @@ $(document).ready(function() {
             	}
             	else
             	{
+                    //starting the roter
+                    $("#load_screen").show();
             		$.post('ConfessionWeb/registerCompany',{company_name: company_name,company_email: company_email,company_employee_strength: company_employee_strength, company_country: company_country, company_state: company_state, company_city: company_city,imageBASE:imageBASE} ,function(data){
 
             			if($.trim(data))
@@ -165,6 +168,7 @@ $(document).ready(function() {
 	                		data = JSON.parse(data);
 
 	                		$('#successMsg').text(data);
+                            $('#load_screen').hide();
             			}
 
             		});

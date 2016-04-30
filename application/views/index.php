@@ -905,26 +905,7 @@
     <script src="<?php echo base_url().'assets/js/waypoints.min.js'?>"></script>
     <script src="<?php echo base_url().'assets/js/scripts.js'?>"></script>
     <script src="<?php echo base_url().'assets/js/index.js'?>"></script>
-    <script>
-    // window.addEventListener("load", function(){
-    //     var load_screen = document.getElementById("load_screen");
-    //     document.body.removeChild(load_screen);
-    // });
-
-    // $(document).ready(function() {
-    //    $(this).load(function() {
-    //       $('.progress').hide();
-    //       $('body').css("opacity", "1");
-    //    });
-    // });
-    $(document).ready(function() {
-       $("#firstsubmit").click(function() {
-            $("#load_screen").show();
-          //$('#load_screen').hide();
-       });
-    });
-
-    </script>
+    
 </body>
 
 </html>
