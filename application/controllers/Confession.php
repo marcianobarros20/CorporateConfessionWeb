@@ -150,7 +150,8 @@ class Confession extends CI_Controller {
 //exit;
 		if($result)
 		{
-			print_r($result);
+			//print_r($result);
+			$this->pushNotification($data);
 		}
 		else
 		{
