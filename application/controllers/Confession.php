@@ -43,29 +43,54 @@ class Confession extends CI_Controller {
 
 	}
 
-	public function pushNotification()
+	public function notifiFirst()
+	{
+		$token = "fEGhvqURPbg:APA91bEH8t4K2FgrOQahjvfbfu09eifVDluYEO_3K6kw8AZtiX9YuCOrVupzojbFKeJGE3Z4OeQyxSApEssjiRg6e0_AfdQGZ2UfRIuxx5P2c1BhVQXOzBNZe0oIR4LIs4XmoLopOunW";
+
+		$this->pushNotification($token);
+	}
+	public function notifiSecond()
+	{
+		$token = "df_lpBr1Hp0:APA91bFTkEB6PF0Ls9HNSPWp83IWwP3hgDT8RjQLml6o24p_vPgW6Qn5Gk6U2UGm_21xsfBgyMwuuycSm43j9pMT6NPvDSxdJ30k8_KZxJ81Va5esY-tD56HC0rx4VInMU2T6Gdb0tyO";
+
+		$this->pushNotification($token);
+	}
+
+	public function sendPush()
+	{
+		$data['title'] = "send push";
+		$data['message'] = "sending push";
+
+		$this->pushNotification($data);
+	}
+
+
+	public function pushNotification($data)
 	{
 		//Getting api key 
 		$api_key = "AIzaSyCMYYkHPQKcRjsrwZryisVNo-qzL2fn2Rs";//$_POST['apikey'];	
 		
 		//Getting registration token we have to make it as array 
-		$reg_token = array("diQqksEafH4:APA91bEUFZaqfohknEpNduPYnxPnTlbZc60SonmwNF1jbkAW4z7rgBzxfn0FowDmxlu42LOFh-1BrFcrJEBRDTvSXCtu69V5v1Lw8UU_MoRQG0gEqJMEtNhYk9R4-CAEgkTpXHMkJarS");
+		$reg_token = array("fEGhvqURPbg:APA91bEH8t4K2FgrOQahjvfbfu09eifVDluYEO_3K6kw8AZtiX9YuCOrVupzojbFKeJGE3Z4OeQyxSApEssjiRg6e0_AfdQGZ2UfRIuxx5P2c1BhVQXOzBNZe0oIR4LIs4XmoLopOunW");
 		
 		//Getting the message 
 		$message = "from localhost";//$_POST['message'];
 		
 		//Creating a message array 
-		$msg = array
+		/*$msg = array
 		(
-			'message' 	=>"from codeigniter",
-			'title'		=> 'Message from Machine Localhost',
-			'subtitle'	=> 'Android Push Notification using GCM Demo',
+			'message' 	=>"Confession Mdsfasdf sdfasdf sfsadf sadfa fsdfasd fasdfasdf sadfasdf sdfasdf sdfasdf sdfasdf sdfasdfasd sdfsdfasdfa dsfsd sdfasdfasd sdf dsfa sdfdsf sdaf  sddfs fsadf essage",
+			'title'		=> 'Oracle Header',
+			'subtitle'	=> 'Confession Name',
 			'tickerText'	=> 'Ticker text here...Ticker text here...Ticker text here',
 			'vibrate'	=> 1,
 			'sound'		=> 1,
 			'largeIcon'	=> 'large_icon',
 			'smallIcon'	=> 'small_icon'
-		);
+		);*/
+
+		$msg['message'] = $data['sender_msg'];
+		$msg['title'] = $data['sender_name'];
 		
 		//Creating a new array fileds and adding the msg array and registration token array here 
 		$fields = array
@@ -103,7 +128,7 @@ class Confession extends CI_Controller {
 		
 		//if success is 1 means message is sent 
 		if($flag == 1){
-			echo "Notification sent succesfully";
+			echo "1";
 		}else{
 			echo "Error in sending Push Notification";
 		}
@@ -150,7 +175,8 @@ class Confession extends CI_Controller {
 //exit;
 		if($result)
 		{
-			print_r($result);
+			//print_r($result);
+			$this->pushNotification($data);
 		}
 		else
 		{
