@@ -3,6 +3,10 @@
 <!--[if IE 7]><html lang="en" class="no-js ie7"><![endif]-->
 <!--[if IE 8]><html lang="en" class="no-js ie8"><![endif]-->
 <!--[if gt IE 8]><!-->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
 <html lang="en" class="no-js">
 <!--<![endif]-->
 
@@ -12,8 +16,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <link rel="shortcut icon" href="<?php echo base_url().'assets/img/favicon_tie.ico'?>">
-    
     <!-- Bootstrap 3.3.2 -->
+    
     <link rel="stylesheet" href="<?php echo base_url().'assets/css/bootstrap.min.css'?>">
     
     <link rel="stylesheet" href="<?php echo base_url().'assets/css/animate.css'?>">
@@ -21,6 +25,8 @@
     <link rel="stylesheet" href="<?php echo base_url().'assets/css/slick.css'?>">
     <link rel="stylesheet" href="<?php echo base_url().'assets/js/rs-plugin/css/settings.css'?>">
     <link rel="stylesheet" href="<?php echo base_url().'assets/css/confession.css'?>">
+    <!-- <link rel="stylesheet" href="assets/css/demo.css">  -->
+    
 
     <link rel="stylesheet" href="<?php echo base_url().'assets/css/styles.css'?>">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
@@ -31,10 +37,8 @@
 
     <script type="text/javascript" src="<?php echo base_url().'assets/js/modernizr.custom.32033.js'?>"></script>
 
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+   
+    
 </head>
 
 <body>
@@ -411,7 +415,7 @@
                                     <h3>Contact Tier5 For More Cool Apps And Websites Like This</h3>
                                 </div>
                                 <div class="media">
-                                    <a class="pull-left">
+                                    <a href="https://tier5.us" target="_blank" class="pull-left">
                                         <i class="fa fa-globe fa-2x"></i>
                                     </a>
                                     <div class="media-body">
@@ -420,12 +424,12 @@
                                 </div>
                                 
                                 <div class="media">
-                                    <a class="pull-left" href="#" >
+                                    <a class="pull-left">
                                         <i class="fa fa-envelope fa-2x"></i>
                                     </a>
                                     <div class="media-body">
                                         <h4 class="media-heading">
-                                            <a href="mailto:hello@tier5.us" target="_blank">hello@tier5.us</a>
+                                            <a>hello@tier5.us</a>
                                         </h4>
                                     </div>
                                 </div>
@@ -454,7 +458,7 @@
                 <div class="row">
                     <div class="col-md-4 col-sm-4 scrollpoint sp-effect1">
                         <div class="media text-right feature">
-                            <a class="pull-right" href="#">
+                            <a class="pull-right">
                                 <i class="fa fa-cogs fa-2x"></i>
                             </a>
                             <div class="media-body">
@@ -472,7 +476,7 @@
                             </div>
                         </div>
                         <div class="media text-right feature">
-                            <a class="pull-right" href="#">
+                            <a class="pull-right">
                                 <i class="fa fa-users fa-2x"></i>
                             </a>
                             <div class="media-body">
@@ -490,7 +494,7 @@
                             </div>
                         </div>
                         <div class="media text-right feature">
-                            <a class="pull-right" href="#">
+                            <a class="pull-right">
                                 <i class="fa fa-question-circle fa-2x"></i>
                             </a>
                             <div class="media-body">
@@ -500,11 +504,11 @@
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-4 trans-img">
-                        <img src="<?php echo base_url().'assets/img/freeze/iphone-freeze2.png'?>" class="img-responsive scrollpoint sp-effect5" alt="">
+                        <img src="<?php echo base_url().'assets/img/freeze/pic2.png'?>" class="img-responsive scrollpoint sp-effect5" alt="">
                     </div>
                     <div class="col-md-4 col-sm-4 scrollpoint sp-effect2">
                         <div class="media feature">
-                            <a class="pull-left" href="#">
+                            <a class="pull-left">
                                 <i class="fa fa-male fa-2x"></i>
                             </a>
                             <div class="media-body">
@@ -523,7 +527,7 @@
                             </div>
                         </div>
                         <div class="media feature">
-                            <a class="pull-left" href="#">
+                            <a class="pull-left">
                                 <i class="fa fa-compass fa-2x"></i>
                             </a>
                             <div class="media-body">
@@ -540,8 +544,8 @@
                                 Lorem ipsum dolor sit amet. -->
                             </div>
                         </div>
-                        <div class="media active feature">
-                            <a class="pull-left" href="#">
+                        <div class="media feature">
+                            <a class="pull-left">
                                 <i class="fa fa-comments fa-2x"></i>
                             </a>
                             <div class="media-body">
@@ -653,69 +657,27 @@
                     <p>Take a closer look in more detail</p>
 
 
-                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-      <li data-target="#myCarousel" data-slide-to="3"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <img src="assets/img/p01.png" alt="snap-short" width="460" height="345">
-      </div>
-
-      <div class="item">
-        <img src="assets/img/p02.png" alt="snap-short" width="460" height="345">
-      </div>
-    
-      <div class="item">
-        <img src="assets/img/p03.png" alt="snap-short" width="460" height="345">
-      </div>
-
-      <div class="item">
-        <img src="assets/img/p05.png" alt="snap-short" width="460" height="345">
-      </div>
-    </div>
-
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-
-                    <!-- <div class="row">
+                    <div class="row">
                     
 
                         <div class="col-sm-4">
                             <div class="tilt">
-                            <a href="#"><img src="<?php echo base_url().'assets/img/p01.png'?>" alt=""></a>
+                            <a><img src="<?php echo base_url().'assets/img/pic3.png'?>" alt=""></a>
                             </div>
                         </div>
 
                         <div class="col-sm-4">
                             <div class="tilt">
-                            <a href="#"><img src="<?php echo base_url().'assets/img/p02.png'?>" alt=""></a>
+                            <a><img src="<?php echo base_url().'assets/img/picnew1.png'?>" alt=""></a>
                             </div>
                         </div>
 
                         <div class="col-sm-4">
                             <div class="tilt">
-                            <a href="#"><img src="<?php echo base_url().'assets/img/p03.png'?>" alt=""></a>
+                            <a><img src="<?php echo base_url().'assets/img/pic2.png'?>" alt=""></a>
                             </div>
-                        </div>
-
-                    </div> -->
-                
-
+                        </div>   
+                    </div>
 
                 </div>
             </div>
@@ -792,9 +754,9 @@
                     <img src="<?php echo base_url().'assets/img/freeze/logo1.png'?>" alt="" class="logo">
                 </a>
                 <div class="social">
-                    <a href="https://tier5.us/" target="_blank" class="scrollpoint sp-effect3"><i class="fa fa-envelope fa-lg"></i></a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=hello@tier5.us" target="_blank" class="scrollpoint sp-effect3"><i class="fa fa-envelope fa-lg"></i></a>
                     <a href="https://www.facebook.com/tier5development/" target="_blank" class="scrollpoint sp-effect3"><i class="fa fa-facebook fa-lg"></i></a>
-                    <a href="#" target="_blank" class="scrollpoint sp-effect3"><i class="fa fa-skype fa-lg"></i></a>
+                    <a class="scrollpoint sp-effect3"><i class="fa fa-skype fa-lg"></i></a>
                 </div>
                 <div class="rights">
                     <p>Copyright © 2015 Tier5. All Rights Reserved.</p>
@@ -896,6 +858,7 @@
 
 
 
+ 
     <script src="<?php echo base_url().'assets/js/jquery-1.11.1.min.js'?>"></script>
     <script src="<?php echo base_url().'assets/js/bootstrap.min.js'?>"></script>
     <script src="<?php echo base_url().'assets/js/slick.min.js'?>"></script>
@@ -905,26 +868,7 @@
     <script src="<?php echo base_url().'assets/js/waypoints.min.js'?>"></script>
     <script src="<?php echo base_url().'assets/js/scripts.js'?>"></script>
     <script src="<?php echo base_url().'assets/js/index.js'?>"></script>
-    <script>
-    // window.addEventListener("load", function(){
-    //     var load_screen = document.getElementById("load_screen");
-    //     document.body.removeChild(load_screen);
-    // });
-
-    // $(document).ready(function() {
-    //    $(this).load(function() {
-    //       $('.progress').hide();
-    //       $('body').css("opacity", "1");
-    //    });
-    // });
-    $(document).ready(function() {
-       $("#firstsubmit").click(function() {
-            $("#load_screen").show();
-          //$('#load_screen').hide();
-       });
-    });
-
-    </script>
-</body>
+    
+    </body>
 
 </html>

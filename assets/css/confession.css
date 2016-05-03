@@ -1,8 +1,15 @@
-body{
+a{
 	cursor: pointer;
 }
+option {
+    color: #232424;
+}
+/*.mobo-pic{
+	width:228px;
+	height: 446px;
+}*/
 div#load_screen{
-	background-color: RGBA(0, 0, 0, 0.22);
+	background-color: rgba(244, 251, 250, 0.65);
 	opacity: 1;
 	position: fixed;
 	z-index: 10;
@@ -50,7 +57,7 @@ div#load_screen > div#loading .fa-spinner{
 }*/
 .drop-search img {
     width: 8%;
-    height: 5%;
+    height: 20px;
     margin-top: 0%;
 }
 .navbar-brand .logo{
@@ -66,22 +73,23 @@ hr {
 	margin-top:16%;
 }
 
-.trans-img img { height: 446px; width: 228px; -webkit-transition: all 2s ease; -moz-transition: all 2s ease; -ms-transition: all 2s ease; transition: all 2s ease; } 
-.trans-img img:hover { width: 328px; height: 546px; } 
+.trans-img img { width: 228px; height: 446px; -webkit-transition: all 2s ease; -moz-transition: all 2s ease; -ms-transition: all 2s ease; transition: all 2s ease; } 
+.trans-img img:hover { width: 300px; height: 546px; } 
 
-.carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-      width: 30%;
-      margin: auto;
-      height:500px;
-  }
-
-/*.img-zoom-div{
-	transition: all .2s ease-in-out;
+.tilt img{
+    width: 228px; 
+    height: 446px;
+  -webkit-transition: all 2s ease;
+  -moz-transition: all 2s ease; 
+  -ms-transition: all 2s ease; 
+  transition: all 2s ease;
 }
+ 
+.tilt img:hover {
+  width: 300px; height: 546px; }
 
-.img-zoom-div:hover{ transform: scale(1.1); }
-*/
+
+
 
 @media all and (max-width: 920px) {
 
@@ -94,7 +102,7 @@ hr {
 .navbar-brand .logo{width:60%;}
 /*header .navbar-default ul.navbar-nav {padding-top: 0px !important;}*/
 .col-sm-4.get-app-icon {
-    margin-left: 15px;
+    margin-left: 45px;
 }
 .corporate-con {
     margin-top: 25%;
@@ -104,9 +112,48 @@ hr {
 }
 .drop-search img {
     width: 9%;
-    height: 6%;
+    height: 20px;
     margin-top: 1%;
 }
+.tp-caption img {
+    background: transparent;
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)";
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
+    zoom: 1;
+    width: 101%;
+    margin-left: -36px;
+}
+.btn.btn-primary.inverse {
+    color: #ffffff;
+    border-color: #ffffff;
+    margin-top: -3px;
+}
+.trans-img img {
+    width: 157px;
+    height: 340px;
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -ms-transition: all 2s ease;
+    transition: all 2s ease;
+}
+.trans-img img:hover { width: 220px; height: 406px; } 
+
+.tilt img {
+    width: 170px;
+    height: 346px;
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -ms-transition: all 2s ease;
+    transition: all 2s ease;
+}
+.tilt img:hover {
+  width: 220px; height: 406px; }
+/*.hanging-phone {
+    position: absolute;
+    right: 0;
+    z-index: 0;
+    bottom: -189px !important;
+}*/
 
 }
 
@@ -142,7 +189,7 @@ h3{font-size: 18px;}
 }
 .drop-search img {
     width: 8%;
-    height: 6%;
+    height: 20px;
     margin-top: 2%;
 }
 .drop-option {

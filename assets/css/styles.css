@@ -152,7 +152,7 @@ header .navbar-default.scrolled ul.navbar-nav {
   position: absolute;
   right: 0;
   z-index: 0;
-  bottom: -70px;
+  bottom: -70px !important;
 }
 .section-heading {
   margin: 60px 0 80px;
@@ -450,7 +450,7 @@ section#support .media .media-heading a {
 }
 /* footer section */
 footer {
-  padding: 80px 0;
+  padding-top: 25px;
   text-align: center;
 }
 footer a > img {
@@ -600,7 +600,7 @@ form .form-control {
   height: 40px;
   line-height: 40px;
   padding: 10px 20px;
-  color: #cfcfcf;
+  color: #272626;
   border: 2px solid #cccccc;
   font-weight: 300;
 }
@@ -1105,7 +1105,7 @@ form .form-control:focus {
 }
 
 /*TILT*/
-.tilt {
+/*.tilt {
   -webkit-transition: all 0.5s ease;
      -moz-transition: all 0.5s ease;
        -o-transition: all 0.5s ease;
@@ -1119,7 +1119,7 @@ form .form-control:focus {
        -o-transform: rotate(-10deg);
       -ms-transform: rotate(-10deg);
           transform: rotate(-10deg);
-}
+}*/
 
 .alert-success {
     color: #3c763d;
@@ -1127,4 +1127,13 @@ form .form-control:focus {
     border-color: #d6e9c6;
     padding-top: 50px  !important;
     padding-bottom: 50px !important;
+}
+
+
+
+@media only screen and (min-width: 767px) and (max-width: 1023px){
+.hanging-phone img {
+    display:none;
+}
+
 }
