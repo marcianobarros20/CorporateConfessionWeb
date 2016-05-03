@@ -253,7 +253,7 @@ function ValidateEmail(email) {
                         $('.drop-option').hide();
                         //alert('backspace trapped')
                     }
-                    $('#searchResult').html("");
+                    //$('#searchResult').html("");
                     
                       search();
                   });
@@ -329,3 +329,11 @@ function ValidateEmail(email) {
         }
 
     });
+//============================================================================================
+
+    $('body').click(function(){
+
+         $('#searchResult').hide();
+
+    });
+//============================================================================================

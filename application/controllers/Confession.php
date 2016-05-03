@@ -43,6 +43,72 @@ class Confession extends CI_Controller {
 
 	}
 
+	public function pushNotification()
+	{
+		//Getting api key 
+		$api_key = "AIzaSyCMYYkHPQKcRjsrwZryisVNo-qzL2fn2Rs";//$_POST['apikey'];	
+		
+		//Getting registration token we have to make it as array 
+		$reg_token = array("diQqksEafH4:APA91bEUFZaqfohknEpNduPYnxPnTlbZc60SonmwNF1jbkAW4z7rgBzxfn0FowDmxlu42LOFh-1BrFcrJEBRDTvSXCtu69V5v1Lw8UU_MoRQG0gEqJMEtNhYk9R4-CAEgkTpXHMkJarS");
+		
+		//Getting the message 
+		$message = "from localhost";//$_POST['message'];
+		
+		//Creating a message array 
+		$msg = array
+		(
+			'message' 	=>"from codeigniter",
+			'title'		=> 'Message from Machine Localhost',
+			'subtitle'	=> 'Android Push Notification using GCM Demo',
+			'tickerText'	=> 'Ticker text here...Ticker text here...Ticker text here',
+			'vibrate'	=> 1,
+			'sound'		=> 1,
+			'largeIcon'	=> 'large_icon',
+			'smallIcon'	=> 'small_icon'
+		);
+		
+		//Creating a new array fileds and adding the msg array and registration token array here 
+		$fields = array
+		(
+			'registration_ids' 	=> $reg_token,
+			'data'			=> $msg
+		);
+		
+		//Adding the api key in one more array header 
+		$headers = array
+		(
+			'Authorization: key=' . $api_key,
+			'Content-Type: application/json'
+		); 
+		
+		//Using curl to perform http request 
+		$ch = curl_init();
+		curl_setopt( $ch,CURLOPT_URL, 'https://android.googleapis.com/gcm/send' );
+		curl_setopt( $ch,CURLOPT_POST, true );
+		curl_setopt( $ch,CURLOPT_HTTPHEADER, $headers );
+		curl_setopt( $ch,CURLOPT_RETURNTRANSFER, true );
+		curl_setopt( $ch,CURLOPT_SSL_VERIFYPEER, false );
+		curl_setopt( $ch,CURLOPT_POSTFIELDS, json_encode( $fields ) );
+		
+		//Getting the result 
+		$result = curl_exec($ch );
+		curl_close( $ch );
+		
+		//Decoding json from result 
+		$res = json_decode($result);
+
+		
+		//Getting value from success 
+		$flag = $res->success;
+		
+		//if success is 1 means message is sent 
+		if($flag == 1){
+			echo "Notification sent succesfully";
+		}else{
+			echo "Error in sending Push Notification";
+		}
+	}
+
 
 	public function postConfession()
 	{
