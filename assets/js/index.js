@@ -114,6 +114,7 @@ $(document).ready(function() {
 
             $('#firstsubmit').click(function(){
 
+                
 
             	 company_name = $('#company_name').val();
             	 company_email = $('#company_email').val();
@@ -152,6 +153,8 @@ $(document).ready(function() {
             	}
             	else
             	{
+                    //starting the roter
+                    $("#load_screen").show();
             		$.post('ConfessionWeb/registerCompany',{company_name: company_name,company_email: company_email,company_employee_strength: company_employee_strength, company_country: company_country, company_state: company_state, company_city: company_city,imageBASE:imageBASE} ,function(data){
 
             			if($.trim(data))
@@ -165,6 +168,7 @@ $(document).ready(function() {
 	                		data = JSON.parse(data);
 
 	                		$('#successMsg').text(data);
+                            $('#load_screen').hide();
             			}
 
             		});
@@ -181,6 +185,7 @@ $(document).ready(function() {
 
 
                     $('#secondform').hide();
+                    $('#errorAlert').hide();
                     $('#firstform').fadeIn("slow");
 
 
@@ -248,7 +253,7 @@ function ValidateEmail(email) {
                         $('.drop-option').hide();
                         //alert('backspace trapped')
                     }
-                    $('#searchResult').html("");
+                    //$('#searchResult').html("");
                     
                       search();
                   });
@@ -257,6 +262,7 @@ function ValidateEmail(email) {
     {
         
         $('#firstform').hide();
+        $('#errorAlert').hide();
 
         $.post('ConfessionWeb/getCompanyDetails',{tbl_id: tbl_id} ,function(data){
 
@@ -269,6 +275,7 @@ function ValidateEmail(email) {
                             $('#requestCompany').html("Request "+company_name_upper+"(via email) for their Unique ID");
                             $('#company_hidden_email').val(data[0].company_name);
                             $('#secondform').show();
+                            $('#mylink').click();
                         }
 
                     });
@@ -322,3 +329,11 @@ function ValidateEmail(email) {
         }
 
     });
+//============================================================================================
+
+    $('body').click(function(){
+
+         $('#searchResult').hide();
+
+    });
+//============================================================================================

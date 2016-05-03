@@ -373,7 +373,8 @@
                                 </div>
 
 
-                                <div id="secondform">
+                                <div id="secondform" style="display: none;" class="wow bounceInRight">
+                                <a id="mylink" href="#secondform" style="display: none"></a>
 
 
                                         <h1 id="requestCompany"></h1>
@@ -868,7 +869,8 @@
     <script src="<?php echo base_url().'assets/js/waypoints.min.js'?>"></script>
     <script src="<?php echo base_url().'assets/js/scripts.js'?>"></script>
     <script src="<?php echo base_url().'assets/js/index.js'?>"></script>
-    
+
     </body>
+
 
 </html>
