@@ -72,7 +72,7 @@ class ConfessionNew extends CI_Controller {
 		
 		//Getting registration token we have to make it as array 
 		$reg_token[] = "deJYQNM9qoI:APA91bG8XxX6Y7I9BoTVdkHJjbDBLY4hU__BGGTskCAJP9wzBXLBL3c6_gc1TXOcXUfrbNV-KU_D2glmyvQuuRuBOsUl8Fv8WjUf6nt0EwRaT74Jfx6xhMV77rGEc7ud4gbZ2vT4kyhH";
-		$reg_token[] = "e749maceOGU:APA91bFWcZlb8EShwE7jTuGdn77LSK2CIKK9pQ7JhzPTvTz7DYhoWEAKu_QCUdexmLfYIGudY4pk311YeMNUq5w0FqYu9Bu12EALcjTByPem4lF5Qz8IOUeFtyobcoHIOLEX0_E3Nuaf";
+		$reg_token[] = "eum2xTSXTNI:APA91bGKc4ARn5pGu64OfyWmPkvEigzw9dB9f1t1BopebaSFrX5B2ref1Oe-YBWW9yq9v1ZOp-MfghO0f3VzTwsZKcp0boKo5KEoRWgBY4jcxerMn5MjPZAyN_SiRgEAl0z97UztfCCy";
 		//Getting the message 
 		$message = "from localhost";//$_POST['message'];
 		
