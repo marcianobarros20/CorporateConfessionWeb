@@ -363,9 +363,48 @@ public function saveToken()
 {
 	$data['token'] = $this->input->post('token');
 	$data['android_id'] = $this->input->post('android_id');
+	$data['company_id'] = $this->input->post('company_id');
+
+	$result = $this->ConfessionModel->ifUserExists($data['android_id']);
+
+	if($result)//user exists
+	{
+		//
+		$update['token'] = $data['token'];
+		$update['company_id'] = $data['company_id'];
+		$where['android_id'] = $data['android_id'];
+		$result1 = $this->ConfessionModel->updateUserData($update,$where);//updating user details
+
+		if($result1)
+		{
+			echo "updated";
+		}
+		else
+		{
+			echo "error in saveTOKEN";
+		}
+
+
+	}
+	else//user does not exists
+	{
+		$result2 = $this->ConfessionModel->insertNewUserData($data);//inserting new user's data into database
+		if($result2)
+		{
+			echo "inserted";
+		}
+		else
+		{
+			echo "not inserted";
+		}
+	}
+
+
 
 	echo json_encode($data);
 }
+
+
 
 
 
