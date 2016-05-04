@@ -89,8 +89,8 @@ class Confession extends CI_Controller {
 			'smallIcon'	=> 'small_icon'
 		);*/
 
-		$msg['message'] = $data['sender_msg'];
-		$msg['title'] = $data['sender_name'];
+		$msg['message'] = $push['message'];
+		$msg['title'] = $push['title'];
 		
 		//Creating a new array fileds and adding the msg array and registration token array here 
 		$fields = array
@@ -148,10 +148,12 @@ class Confession extends CI_Controller {
 		$result = $this->ConfessionModel->postConfession($data);
 //		echo $result;
 //exit;
+		$push['title'] = $data['sender_name'];
+		$push['message'] = $data['sender_msg']; 
 		if($result)
 		{
 			
-			$this->pushNotification($data);
+			$this->pushNotification($push);
 			print_r($result);
 		}
 		else
@@ -175,10 +177,12 @@ class Confession extends CI_Controller {
 		$result = $this->ConfessionModel->postConfession($data);
 //		echo $result;
 //exit;
+		$push['title'] = $data['sender_name'];
+		$push['message'] = $data['sender_msg']; 
 		if($result)
 		{
 			
-			$this->pushNotification($data);
+			$this->pushNotification($push);
 			print_r($result);
 		}
 		else
@@ -239,7 +243,7 @@ public function showTimeStamp()
 
 	echo date("Y-m-d H:i:s");
 
-echo $result;
+	echo $result;
 
 
 	
@@ -254,6 +258,8 @@ public function postComment()
 	$data['confession_id_fk'] = $this->input->post('confession_id_fk');
 
 	$result = $this->ConfessionModel->postComment($data);
+
+
 
 	if($result)
 	{
