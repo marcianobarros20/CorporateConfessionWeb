@@ -128,9 +128,9 @@ class Confession extends CI_Controller {
 		
 		//if success is 1 means message is sent 
 		if($flag == 1){
-			echo "1";
+			//echo "1";
 		}else{
-			echo "Error in sending Push Notification";
+			//echo "Error in sending Push Notification";
 		}
 	}
 
@@ -150,8 +150,9 @@ class Confession extends CI_Controller {
 //exit;
 		if($result)
 		{
-			//print_r($result);
+			
 			$this->pushNotification($data);
+			print_r($result);
 		}
 		else
 		{
@@ -176,8 +177,9 @@ class Confession extends CI_Controller {
 //exit;
 		if($result)
 		{
-			//print_r($result);
+			
 			$this->pushNotification($data);
+			print_r($result);
 		}
 		else
 		{
