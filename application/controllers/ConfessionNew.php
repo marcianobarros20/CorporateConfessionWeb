@@ -364,6 +364,7 @@ public function saveToken()
 	$data['token'] = $this->input->post('token');
 	$data['android_id'] = $this->input->post('android_id');
 	$data['company_id'] = $this->input->post('company_id');
+	$data['time'] = date("Y-m-d H:i:s");
 
 	$result = $this->ConfessionModel->ifUserExists($data['android_id']);
 
@@ -373,6 +374,7 @@ public function saveToken()
 		$update['token'] = $data['token'];
 		$update['company_id'] = $data['company_id'];
 		$where['android_id'] = $data['android_id'];
+
 		$result1 = $this->ConfessionModel->updateUserData($update,$where);//updating user details
 
 		if($result1)
