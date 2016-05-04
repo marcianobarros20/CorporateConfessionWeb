@@ -71,7 +71,7 @@ class Confession extends CI_Controller {
 		$api_key = "AIzaSyCMYYkHPQKcRjsrwZryisVNo-qzL2fn2Rs";//$_POST['apikey'];	
 		
 		//Getting registration token we have to make it as array 
-		$reg_token = array("fEGhvqURPbg:APA91bEH8t4K2FgrOQahjvfbfu09eifVDluYEO_3K6kw8AZtiX9YuCOrVupzojbFKeJGE3Z4OeQyxSApEssjiRg6e0_AfdQGZ2UfRIuxx5P2c1BhVQXOzBNZe0oIR4LIs4XmoLopOunW");
+		$reg_token = array("dkXbGg3QfDM:APA91bE_N7ulvvLqv4m4EgARCLEJGIgIAE7Dnm2qCNymHSeHOiVGb7hyu0HpD-A9hh0BPNsgGG0VFbzcIUPCATi3H59_Up7vX7M2DT5RrBIG-i92URJ9vHDaW86zlm5drvHdpvbvVAZ2");
 		
 		//Getting the message 
 		$message = "from localhost";//$_POST['message'];
