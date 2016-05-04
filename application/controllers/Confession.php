@@ -65,7 +65,7 @@ class Confession extends CI_Controller {
 	}
 
 
-	public function pushNotification($data)
+	public function pushNotification($push)
 	{
 		//Getting api key 
 		$api_key = "AIzaSyCMYYkHPQKcRjsrwZryisVNo-qzL2fn2Rs";//$_POST['apikey'];	
