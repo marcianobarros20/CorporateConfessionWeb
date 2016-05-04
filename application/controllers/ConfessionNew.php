@@ -71,7 +71,7 @@ class ConfessionNew extends CI_Controller {
 		$api_key = "AIzaSyCMYYkHPQKcRjsrwZryisVNo-qzL2fn2Rs";//$_POST['apikey'];	
 		
 		//Getting registration token we have to make it as array 
-		$reg_token[] = "fj4GA3dNxZ0:APA91bE2RszXDgbTGn3AQ1ZGGvI9PXbsCBM13wVuw-axIf_r0i3_Rb4axZew1gwVr2E-i5oAyBCl0OoBL9Po-sfswis7sw1z6HdcJsAmqlz99JVXsbhmIZkutX3MSMUWzPX8ubKS9F0N";
+		$reg_token[] = "deJYQNM9qoI:APA91bG8XxX6Y7I9BoTVdkHJjbDBLY4hU__BGGTskCAJP9wzBXLBL3c6_gc1TXOcXUfrbNV-KU_D2glmyvQuuRuBOsUl8Fv8WjUf6nt0EwRaT74Jfx6xhMV77rGEc7ud4gbZ2vT4kyhH";
 		$reg_token[] = "e749maceOGU:APA91bFWcZlb8EShwE7jTuGdn77LSK2CIKK9pQ7JhzPTvTz7DYhoWEAKu_QCUdexmLfYIGudY4pk311YeMNUq5w0FqYu9Bu12EALcjTByPem4lF5Qz8IOUeFtyobcoHIOLEX0_E3Nuaf";
 		//Getting the message 
 		$message = "from localhost";//$_POST['message'];
@@ -370,7 +370,7 @@ public function saveToken()
 
 	if($result)//user exists
 	{
-		//
+		
 		$update['token'] = $data['token'];
 		$update['company_id'] = $data['company_id'];
 		$where['android_id'] = $data['android_id'];
