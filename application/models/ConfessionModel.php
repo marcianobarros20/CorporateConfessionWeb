@@ -97,5 +97,12 @@ class ConfessionModel extends CI_Model {
 		return $result;
 	}
 
+	public function getTokens()
+	{
+		$result = $this->db->get('tbl_device_info');
+
+		return $result->result_array();
+	}
+
 
 }
