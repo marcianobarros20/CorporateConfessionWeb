@@ -256,6 +256,7 @@ public function postComment()
 	$data['avatar'] = $this->input->post('avatar');
 	$data['comment_time'] = date("Y-m-d H:i:s");
 	$data['confession_id_fk'] = $this->input->post('confession_id_fk');
+	$data['device_id'] = $this->input->post('device_id');
 
 	$result = $this->ConfessionModel->postComment($data);
 
