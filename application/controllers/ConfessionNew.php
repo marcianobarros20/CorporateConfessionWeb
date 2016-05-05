@@ -354,6 +354,7 @@ public function postCommentReply()
 	$data['reply_time'] = date("Y-m-d H:i:s");
 	$data['comment_id_fk'] = $this->input->post('comment_id_fk');
 	$data['avatar'] = $this->input->post('avatar');
+	$data['device_id'] = $this->input->post('device_id');
 
 	$result = $this->ConfessionModel->postCommentReply($data);
 	echo $result;
