@@ -10,7 +10,7 @@ class ConfessionNew extends CI_Controller {
 		$this->load->model('ConfessionModel');
 		$this->load->library('session');
 	}
-
+ 
 
 
 	public function index()
