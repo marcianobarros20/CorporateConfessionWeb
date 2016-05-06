@@ -67,5 +67,42 @@ class ConfessionModel extends CI_Model {
 		return $result;
 	}
 
+	public function ifUserExists($android_id)
+	{
+		$data['android_id'] = $android_id;
+		$result = $this->db->get_where('tbl_device_info',$data);
+
+		if($result->result_array())
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+	public function updateUserData($update,$where)
+	{
+		$this->db->where($where);
+		$result = $this->db->update('tbl_device_info', $update); 
+
+		return $result;
+	}
+
+	public function insertNewUserData($data)
+	{
+		$result = $this->db->insert('tbl_device_info',$data);
+
+		return $result;
+	}
+
+	public function getTokens()
+	{
+		$result = $this->db->get('tbl_device_info');
+
+		return $result->result_array();
+	}
+
 
 }
