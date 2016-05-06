@@ -103,7 +103,7 @@
 
         
         <!--RevSlider-->
-        <div class="tp-banner-container">
+        <div class="tp-banner-container container">
             <!-- <div class="tp-banner" > -->
                 <ul>
                     <!-- SLIDE  -->
@@ -147,7 +147,7 @@
                                     Confession
                                 </div>
                                 <div class="row">
-                                    <div class="col-xs-12 col-sm-4 col-md-4 wow bounceInUp">
+                                    <div class="col-xs-12 col-sm-4 col-md-5 wow bounceInUp">
                                         <div class="tp-caption sfb hidden-xs" data-x="550" data-y="center" data-hoffset="0" data-voffset="85" data-speed="1000" data-start="1700" data-easing="Power4.easeOut">
                                              <a href="#about" class="btn btn-primary inverse btn-lg">LEARN MORE</a>
                                         </div>
@@ -206,11 +206,7 @@
                                 
 
                             </div> -->
-                                
-                                
-                                
-                               
-                                    </div>
+                            </div>
                             
                         </div>
                         
@@ -713,7 +709,7 @@
 
 
         <section id="getApp">
-            <div class="container-fluid">
+            <div class="container-fluid container">
                 <div class="section-heading inverse scrollpoint sp-effect3">
                     <h1>Get App</h1>
                     <div class="divider"></div>
@@ -757,10 +753,10 @@
                 <div class="social">
                     <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=hello@tier5.us" target="_blank" class="scrollpoint sp-effect3"><i class="fa fa-envelope fa-lg"></i></a>
                     <a href="https://www.facebook.com/tier5development/" target="_blank" class="scrollpoint sp-effect3"><i class="fa fa-facebook fa-lg"></i></a>
-                    <a class="scrollpoint sp-effect3"><i class="fa fa-skype fa-lg"></i></a>
+                    <a class="scrollpoint sp-effect3"><i class="fa fa-linkedin fa-lg"></i></a>
                 </div>
                 <div class="rights">
-                    <p>Copyright © 2015 Tier5. All Rights Reserved.</p>
+                    <p>Copyright © 2016 Tier5. All Rights Reserved.</p>
                     
                 </div>
             </div>
