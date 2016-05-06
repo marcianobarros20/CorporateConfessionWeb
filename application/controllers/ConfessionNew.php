@@ -43,7 +43,7 @@ class ConfessionNew extends CI_Controller {
 
 	}
 
-	public function getTokens()
+	public function getTokens($pushdata)
 	{
 		$result = $this->ConfessionModel->getTokens();
 
@@ -54,7 +54,7 @@ class ConfessionNew extends CI_Controller {
 				$reg_token[]=$key['token'];
 			}
 
-			$this->pushNotification1($reg_token);
+			$this->pushNotification1($reg_token,$pushdata);
 
 			//print_r($reg_token);
 		}
@@ -76,7 +76,7 @@ class ConfessionNew extends CI_Controller {
 		$this->pushNotification1($data);
 	}
 
-	public function pushNotification1($reg_token)
+	public function pushNotification1($reg_token,$msg)
 	{
 		//Getting api key 
 		$api_key = "AIzaSyCMYYkHPQKcRjsrwZryisVNo-qzL2fn2Rs";//$_POST['apikey'];	
@@ -101,8 +101,8 @@ class ConfessionNew extends CI_Controller {
 			'smallIcon'	=> 'small_icon'
 		);*/
 
-		$msg['message'] = "localhost body";//$push['message'];
-		$msg['title'] = " Database localhost";//$push['title'];
+		//$msg['message'] = "localhost body";//$push['message'];
+		//$msg['title'] = " Database localhost";//$push['title'];
 		
 		//Creating a new array fileds and adding the msg array and registration token array here 
 		$fields = array
@@ -139,7 +139,7 @@ class ConfessionNew extends CI_Controller {
 		$flag = $res->success;
 		
 		//if success is 1 means message is sent 
-		if($flag == 1){
+		if($flag){
 			echo "1";
 		}else{
 			//echo "Error in sending Push Notification";
@@ -260,13 +260,14 @@ class ConfessionNew extends CI_Controller {
 		$result = $this->ConfessionModel->postConfession($data);
 //		echo $result;
 //exit;
-		$push['title'] = $data['sender_name'];
-		$push['message'] = $data['sender_msg']; 
+		$pushdata['name'] = $data['sender_name'];
+		$pushdata['message'] = $data['sender_msg'];
+		$pushdata['title'] = "New Confession"; 
 		if($result)
 		{
 			
-			$this->pushNotification($push);
-			print_r($result);
+			$this->getTokens($pushdata);
+			//print_r($result);
 		}
 		else
 		{
