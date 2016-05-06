@@ -74,14 +74,15 @@ class ConfessionNew extends CI_Controller {
 		$this->pushNotification1($data);
 	}
 
-	public function pushNotification1($push)
+	public function pushNotification1()
 	{
 		//Getting api key 
 		$api_key = "AIzaSyCMYYkHPQKcRjsrwZryisVNo-qzL2fn2Rs";//$_POST['apikey'];	
 		
 		//Getting registration token we have to make it as array 
 		$reg_token[] = "dsOfDCWOy_M:APA91bFS31hMmhtlEajUMqx-qdCmAuyhCgJiNotBznPpbjIOuN7PguUad8ilXPUh8SRtGwLq1GKfEd5Kns6Xym8K4-QSaNKUPNdA6EtcnElsBNdzcjRO3IWJYUIuvkZbpfQosyZaHTXf";
-		$reg_token[] = "eum2xTSXTNI:APA91bGKc4ARn5pGu64OfyWmPkvEigzw9dB9f1t1BopebaSFrX5B2ref1Oe-YBWW9yq9v1ZOp-MfghO0f3VzTwsZKcp0boKo5KEoRWgBY4jcxerMn5MjPZAyN_SiRgEAl0z97UztfCCy";
+		/*$reg_token[] = "dsfsfDCWOy_M:APA91bFS31hMmhtlEajUMqx-qdCmAuyhCgJiNotBznPpbjIOuN7PguUad8ilXPUh8SRtGwLq1GKfEd5Kns6Xym8K4-QSaNKUPNdA6EtcnElsBNdzcjRO3IWJYUIuvkZbpfQosyZaHTXf";*/
+		
 		//Getting the message 
 		$message = "from localhost";//$_POST['message'];
 		
@@ -98,8 +99,8 @@ class ConfessionNew extends CI_Controller {
 			'smallIcon'	=> 'small_icon'
 		);*/
 
-		$msg['message'] = $push['message'];
-		$msg['title'] = $push['title'];
+		$msg['message'] = "message";//$push['message'];
+		$msg['title'] = "title";//$push['title'];
 		
 		//Creating a new array fileds and adding the msg array and registration token array here 
 		$fields = array
@@ -139,7 +140,8 @@ class ConfessionNew extends CI_Controller {
 		if($flag == 1){
 			echo "1";
 		}else{
-			echo "Error in sending Push Notification";
+			//echo "Error in sending Push Notification";
+			print_r($res);
 		}
 	}
 
