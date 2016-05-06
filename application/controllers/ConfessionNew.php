@@ -54,7 +54,9 @@ class ConfessionNew extends CI_Controller {
 				$reg_token[]=$key['token'];
 			}
 
-			print_r($reg_token);
+			$this->pushNotification1($reg_token);
+
+			//print_r($reg_token);
 		}
 
 		
@@ -74,13 +76,13 @@ class ConfessionNew extends CI_Controller {
 		$this->pushNotification1($data);
 	}
 
-	public function pushNotification1()
+	public function pushNotification1($reg_token)
 	{
 		//Getting api key 
 		$api_key = "AIzaSyCMYYkHPQKcRjsrwZryisVNo-qzL2fn2Rs";//$_POST['apikey'];	
 		
 		//Getting registration token we have to make it as array 
-		$reg_token[] = "dsOfDCWOy_M:APA91bFS31hMmhtlEajUMqx-qdCmAuyhCgJiNotBznPpbjIOuN7PguUad8ilXPUh8SRtGwLq1GKfEd5Kns6Xym8K4-QSaNKUPNdA6EtcnElsBNdzcjRO3IWJYUIuvkZbpfQosyZaHTXf";
+		/*$reg_token[] = "dsOfDCWOy_M:APA91bFS31hMmhtlEajUMqx-qdCmAuyhCgJiNotBznPpbjIOuN7PguUad8ilXPUh8SRtGwLq1GKfEd5Kns6Xym8K4-QSaNKUPNdA6EtcnElsBNdzcjRO3IWJYUIuvkZbpfQosyZaHTXf";*/
 		/*$reg_token[] = "dsfsfDCWOy_M:APA91bFS31hMmhtlEajUMqx-qdCmAuyhCgJiNotBznPpbjIOuN7PguUad8ilXPUh8SRtGwLq1GKfEd5Kns6Xym8K4-QSaNKUPNdA6EtcnElsBNdzcjRO3IWJYUIuvkZbpfQosyZaHTXf";*/
 		
 		//Getting the message 
@@ -99,8 +101,8 @@ class ConfessionNew extends CI_Controller {
 			'smallIcon'	=> 'small_icon'
 		);*/
 
-		$msg['message'] = "message";//$push['message'];
-		$msg['title'] = "title";//$push['title'];
+		$msg['message'] = "localhost body";//$push['message'];
+		$msg['title'] = " Database localhost";//$push['title'];
 		
 		//Creating a new array fileds and adding the msg array and registration token array here 
 		$fields = array
