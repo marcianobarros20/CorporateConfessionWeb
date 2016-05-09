@@ -265,8 +265,28 @@ class ConfessionNew extends CI_Controller {
 		$pushdata['title'] = "New Confession"; 
 		if($result)
 		{
+			//echo $result;
+			$tblid['tbl_id'] = $result;
+			$result1 = $this->ConfessionModel->getConfessionByID($tblid);
 			
-			$this->getTokens($pushdata);
+			$result1['propertime'] = $this->time_elapsed_string(strtotime($result1['time']));
+			$result1['title'] = "New Confession";
+			$result1['pushNotification'] = 1;
+			/*$i=0;
+			foreach ($result1 as $key)
+			{
+				$time = strtotime($key['time']);
+				$time1=$this->time_elapsed_string($time);
+				
+				$result1[$i]['propertime'] = $time1;
+				$result1[$i]['title'] = "New Confession";
+				$result1[$i]['pushNotification'] = 1;
+
+				$i++;
+				
+			}*/
+			//print_r($result1);
+			$this->getTokens($result1);
 			//print_r($result);
 		}
 		else

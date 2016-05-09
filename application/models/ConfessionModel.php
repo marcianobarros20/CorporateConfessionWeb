@@ -22,7 +22,7 @@ class ConfessionModel extends CI_Model {
 	{
 		$result = $this->db->insert('tbl_feed',$data);
 
-		return $result;
+		return $this->db->insert_id();
 	}
 
 	public function postComment($data)
@@ -102,6 +102,13 @@ class ConfessionModel extends CI_Model {
 		$result = $this->db->get('tbl_device_info');
 
 		return $result->result_array();
+	}
+
+	public function getConfessionByID($data)
+	{
+		$result = $this->db->order_by("tbl_id", "desc")->get_where('tbl_feed',$data);
+		 
+      	 return $result->row_array();
 	}
 
 
