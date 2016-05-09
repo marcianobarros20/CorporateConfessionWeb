@@ -32,6 +32,7 @@ class ConfessionNew extends CI_Controller {
 			$time1=$this->time_elapsed_string($time);
 			
 			$result[$i]['propertime'] = $time1;
+			$result[$i]['totalcomments'] = $this->getNoOfComments($key['tbl_id']);
 
 			$i++;
 			
@@ -41,6 +42,16 @@ class ConfessionNew extends CI_Controller {
 		echo json_encode($result);
 		//print_r($result);
 
+	}
+
+	public function getNoOfComments($tblid)
+	{
+		$data['confession_id_fk'] = $tblid;
+
+		$result = $this->ConfessionModel->getNoOfComments($data);
+
+		return $result; 
+		//print_r($result);
 	}
 
 	public function getTokens($pushdata)

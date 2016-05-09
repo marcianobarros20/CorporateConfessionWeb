@@ -111,5 +111,12 @@ class ConfessionModel extends CI_Model {
       	 return $result->row_array();
 	}
 
+	public function getNoOfComments($data)
+	{
+		$result = $this->db->get_where('tbl_comment',$data);
+
+		return $result->num_rows();
+	}
+
 
 }
