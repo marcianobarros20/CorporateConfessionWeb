@@ -91,6 +91,10 @@ hr {
 .tilt img:hover {
   width: 300px; height: 546px; }
 
+ .navbar-right {
+    float: right!important;
+    margin-right: -105px;
+}
 
 
 
@@ -116,7 +120,13 @@ header .navbar-default.scrolled .navbar-brand img {
 .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
      margin-left: 0px !important; 
 }
+/*.navbar-right {
+    float: right!important;
+    margin-right: -105px;
+}*/
 }
+
+
 
 @media only screen and (min-width: 767px) and (max-width: 1023px){
 
@@ -175,6 +185,11 @@ header .navbar-default ul.navbar-nav {
 }
 .tilt img:hover {
   width: 220px; height: 406px; }
+
+  .navbar-right {
+    float: right!important;
+    margin-right: -15px;
+}
 /*.hanging-phone {
     position: absolute;
     right: 0;
