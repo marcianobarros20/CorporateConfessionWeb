@@ -109,6 +109,7 @@ class ConfessionModel extends CI_Model {
 
 	public function getConfessionByID($data)
 	{
+		$this->db->select('tbl_id,sender_name,sender_msg,time,avatar,company_id,device_id,has_image');
 		$result = $this->db->order_by("tbl_id", "desc")->get_where('tbl_feed',$data);
 		 
       	 return $result->row_array();
