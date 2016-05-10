@@ -308,6 +308,21 @@ class ConfessionNew extends CI_Controller {
 		
 	}
 
+	public function postConfessionNewWithImage()
+	{
+		$data['sender_name'] = $this->input->post('name');
+		$data['sender_msg'] = $this->input->post('confession');
+		$data['avatar'] = $this->input->post('avatar');
+		$data['device_id'] = $this->input->post('device_id');
+		$data['time'] = date("Y-m-d H:i:s");
+		$data['company_id'] = $this->input->post('company_id');
+		$data['confession_image'] = $this->input->post('confession_image');
+		$data['has_image'] = 1;
+
+		echo json_encode($data);
+
+	}
+
 
 
 public function time_elapsed_string($ptime)
