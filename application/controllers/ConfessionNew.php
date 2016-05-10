@@ -319,7 +319,25 @@ class ConfessionNew extends CI_Controller {
 		$data['confession_image'] = $this->input->post('confession_image');
 		$data['has_image'] = 1;
 
-		echo json_encode($data);
+		$result = $this->ConfessionModel->postConfession($data);
+
+		if($result)
+		{
+			//echo $result;
+			$tblid['tbl_id'] = $result;
+			$result1 = $this->ConfessionModel->getConfessionByID($tblid);
+			
+			$result1['propertime'] = $this->time_elapsed_string(strtotime($result1['time']));
+			$result1['title'] = "New Confession";
+			$result1['pushNotification'] = "1";
+		
+			$this->getTokens($result1);
+			
+		}
+		else
+		{
+			echo "error";
+		}
 
 	}
 
