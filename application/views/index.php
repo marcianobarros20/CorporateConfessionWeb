@@ -421,12 +421,12 @@
                                 </div>
                                 
                                 <div class="media">
-                                    <a class="pull-left">
+                                    <a  href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=hello@tier5.us" target="_blank" class="pull-left">
                                         <i class="fa fa-envelope fa-2x"></i>
                                     </a>
-                                    <div class="media-body">
+                                    <div class="media-body"> 
                                         <h4 class="media-heading">
-                                            <a>hello@tier5.us</a>
+                                            <a  href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=hello@tier5.us" target="_blank">hello@tier5.us</a>
                                         </h4>
                                     </div>
                                 </div>
