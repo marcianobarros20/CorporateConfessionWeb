@@ -12,7 +12,10 @@ class ConfessionModel extends CI_Model {
 	public function index($data)
 	{
 		//asc");
+		$this->db->select('tbl_id,sender_name,sender_msg,time,avatar,company_id,device_id,has_image');
 		 $result = $this->db->order_by("tbl_id", "desc")->get_where('tbl_feed',$data);
+
+
 		 //$result->propertime = "propertime";
 
       	 return $result->result_array();
