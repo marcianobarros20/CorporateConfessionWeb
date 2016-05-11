@@ -580,7 +580,7 @@ public function getImageByID()
 
 	$result = $this->ConfessionModel->getImageByID($data);
 
-	print_r($result);
+	echo $result;
 }
 
 
