@@ -134,7 +134,7 @@ class ConfessionModel extends CI_Model {
 		$this->db->select('confession_image');
 		$result = $this->db->get_where('tbl_feed',$data);
 
-		return $result->row()->confession_image;
+		return $result->row_array();
 	}
 
 
