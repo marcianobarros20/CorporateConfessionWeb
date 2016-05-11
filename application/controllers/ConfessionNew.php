@@ -574,6 +574,16 @@ public function saveToken()
 }
 
 
+public function getImageByID()
+{
+	$data['tbl_id'] = $this->input->post('confession_id_fk');
+
+	$result = $this->ConfessionModel->getImageByID($data);
+
+	print_r($result);
+}
+
+
 
 
 
