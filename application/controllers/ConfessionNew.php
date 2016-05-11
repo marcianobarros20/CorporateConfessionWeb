@@ -408,11 +408,29 @@ public function postComment()
 
 	$result = $this->ConfessionModel->postComment($data);
 
-
+	$data1['comment_id'] = $result;
 
 	if($result)
 	{
-		print_r($result);
+			$result1 = $this->ConfessionModel->getCommentByID($data1);
+
+			$pushresult1['propertime'] = $this->time_elapsed_string(strtotime($result1['comment_time']));
+			$pushresult1['title'] = "New Comment On Confession";
+			$pushresult1['pushNotification'] = "1";
+			$pushresult1['sender_name'] = $result1['comment_name'];
+			$pushresult1['sender_msg'] = $result1['comment_msg'];
+			$pushresult1['tbl_id'] = $result1['confession_id_fk'];
+			$pushresult1['time'] = $result1['comment_time'];
+			$pushresult1['device_id'] = $result1['device_id'];
+			$pushresult1['has_image'] = "0";
+		
+			$this->getTokens($pushresult1);
+
+			//print_r($pushresult1);
+	}
+	else
+	{
+		echo "error";
 	}
 }
 

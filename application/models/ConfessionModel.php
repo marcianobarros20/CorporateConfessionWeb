@@ -34,7 +34,7 @@ class ConfessionModel extends CI_Model {
 
 		if($result)
 		{
-			return $result;
+			return $this->db->insert_id();;
 		}
 	}
 
@@ -120,6 +120,13 @@ class ConfessionModel extends CI_Model {
 		$result = $this->db->get_where('tbl_comment',$data);
 
 		return $result->num_rows();
+	}
+
+	public function getCommentByID($data)
+	{
+		$result = $this->db->get_where('tbl_comment',$data);
+
+		return $result->row_array();
 	}
 
 
