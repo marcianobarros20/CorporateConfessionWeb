@@ -467,7 +467,7 @@ public function fetchComment()
 
 public function getNoOfReplies($tbl_id)
 {
-	$data['tbl_id'] = $tbl_id;
+	$data['comment_id_fk'] = $tbl_id;
 
 	$result = $this->ConfessionModel->getNoOfReplies($data);
 
