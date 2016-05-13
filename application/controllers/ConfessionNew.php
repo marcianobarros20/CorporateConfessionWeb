@@ -70,9 +70,33 @@ class ConfessionNew extends CI_Controller {
 			//print_r($reg_token);
 		}
 
-		
+	}
+
+	public function getTokensNew($pushdata,$company_id,$sender_device_id)
+	{
+		$data['company_id'] = $company_id;
+		$data1['android_id'] = $sender_device_id;
+
+		$sender_token = $this->ConfessionModel->getTokenByDeviceId($data1);
+
+		$result = $this->ConfessionModel->getTokensNew($data);
 
 		
+		if($result)
+		{
+			foreach ($result as $key)
+			{
+				if($key['token']!=$sender_token)
+				{
+					$reg_token[]=$key['token'];
+				}
+				
+			}
+
+			$this->pushNotification1($reg_token,$pushdata);
+
+			//print_r($reg_token);
+		}
 
 
 	}
@@ -297,8 +321,8 @@ class ConfessionNew extends CI_Controller {
 				
 			}*/
 			//print_r($result1);
-			$this->getTokens($result1);
-			//print_r($result);
+			$this->getTokensNew($result1,$result1['company_id'],$result1['device_id']);
+			//print_r($result1);
 		}
 		else
 		{
@@ -496,12 +520,12 @@ public function getCommentReply()
 	$data['comment_id_fk'] = $this->input->post('comment_id_fk');
 	$result = $this->ConfessionModel->getCommentReply($data);
 
-	$i=0;
+		$i=0;
 		foreach ($result as $key)
 		{
 			$time = strtotime($key['reply_time']);
 			$time1=$this->time_elapsed_string($time);
-			
+		 	
 			$result[$i]['propertime'] = $time1;
 
 			$i++;
@@ -565,6 +589,7 @@ public function saveToken()
 
 
 	}
+
 	else//user does not exists
 	{
 		$result2 = $this->ConfessionModel->insertNewUserData($data);//inserting new user's data into database

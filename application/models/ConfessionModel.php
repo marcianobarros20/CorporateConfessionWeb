@@ -107,6 +107,21 @@ class ConfessionModel extends CI_Model {
 		return $result->result_array();
 	}
 
+	public function getTokensNew($data)
+	{
+		$result = $this->db->get_where('tbl_device_info',$data);
+
+		return $result->result_array();
+	}
+
+	public function getTokenByDeviceId($data1)
+	{
+		$this->db->select('token');
+		$result = $this->db->get_where('tbl_device_info',$data1);
+
+		return $result->row_array()['token'];
+	}
+
 	public function getConfessionByID($data)
 	{
 		$this->db->select('tbl_id,sender_name,sender_msg,time,avatar,company_id,device_id,has_image');
