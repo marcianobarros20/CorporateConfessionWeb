@@ -355,7 +355,7 @@ class ConfessionNew extends CI_Controller {
 			$result1['title'] = "New Confession";
 			$result1['pushNotification'] = "1";
 		
-			$this->getTokens($result1);
+			$this->getTokensNew($result1,$result1['company_id'],$result1['device_id']);
 			
 		}
 		else
