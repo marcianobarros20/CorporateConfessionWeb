@@ -446,6 +446,7 @@ public function fetchComment()
 			$time1=$this->time_elapsed_string($time);
 			
 			$result[$i]['propertime'] = $time1;
+			$result[$i]['totalReplies'] = $this->getNoOfReplies($key['comment_id']);
 
 			$i++;
 			
@@ -462,6 +463,15 @@ public function fetchComment()
 	{
 		echo "no result";
 	}
+}
+
+public function getNoOfReplies($tbl_id)
+{
+	$data['tbl_id'] = $tbl_id;
+
+	$result = $this->ConfessionModel->getNoOfReplies($data);
+
+	return $result;
 }
 
 public function getDetailsOfID()

@@ -122,6 +122,13 @@ class ConfessionModel extends CI_Model {
 		return $result->num_rows();
 	}
 
+	public function getNoOfReplies($data)
+	{
+		$result = $this->db->get_where('tbl_comment_reply',$data);
+
+		return $result->num_rows();
+	}
+
 	public function getCommentByID($data)
 	{
 		$result = $this->db->get_where('tbl_comment',$data);
