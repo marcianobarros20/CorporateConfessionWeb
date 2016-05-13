@@ -449,7 +449,7 @@ public function postComment()
 			$this->getTokensNew($result2,$result2['company_id'],$data['device_id']);
 			//$this->getTokens($result2);
 
-			print_r($result2);
+			//print_r($result2);
 	}
 	else
 	{
