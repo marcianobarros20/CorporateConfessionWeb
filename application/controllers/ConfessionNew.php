@@ -446,8 +446,8 @@ public function postComment()
 			$result2['title'] = "New Comment On Confession";
 			$result2['pushNotification'] = "1";
 			
-		
-			$this->getTokens($result2);
+			$this->getTokensNew($result2,$result2['company_id'],$result2['device_id']);
+			//$this->getTokens($result2);
 
 			print_r($result2);
 	}
