@@ -446,7 +446,7 @@ public function postComment()
 			$result2['title'] = "New Comment On Confession";
 			$result2['pushNotification'] = "1";
 			
-			$this->getTokensNew($result2,$result2['company_id'],$result2['device_id']);
+			$this->getTokensNew($result2,$result2['company_id'],$data['device_id']);
 			//$this->getTokens($result2);
 
 			print_r($result2);
@@ -574,7 +574,7 @@ public function postCommentReply()
 			$result2['title'] = "New Reply On Comment";
 			$result2['pushNotification'] = "1";
 			
-			$this->getTokensNew($result2,$result2['company_id'],$result2['device_id']);
+			$this->getTokensNew($result2,$result2['company_id'],$data['device_id']);
 		}
 
 		
