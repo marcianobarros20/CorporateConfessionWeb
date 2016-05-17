@@ -12,7 +12,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Corporate Confessions</title>
+    <title>Employee Confessions | Corporate Gossip | Confession App - Corporate Confessions</title>
+    <meta name="description" content="Corporate Confessions website and app allows you to share confessions anonymously. Best apps for employee confessions, confessions at a company or corporate gossip.">
+    <meta name="keywords" content="employee confessions, confessions at a company, corporate gossip, confession website, confession app">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <link rel="shortcut icon" href="<?php echo base_url().'assets/img/favicon_tie.ico'?>">
@@ -37,6 +40,18 @@
 
     <script type="text/javascript" src="<?php echo base_url().'assets/js/modernizr.custom.32033.js'?>"></script>
 
+    <!--Google Analytics Code-->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-74654877-4', 'auto');
+    ga('send', 'pageview');
+
+    </script>
+    <!--Google Analytics Code-->
    
     
 </head>
