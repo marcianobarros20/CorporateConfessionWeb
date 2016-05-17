@@ -446,10 +446,10 @@ public function postComment()
 			$result2['title'] = "New Comment On Confession";
 			$result2['pushNotification'] = "1";
 			
-			$this->getTokensNew($result2,$result2['company_id'],$result2['device_id']);
+			$this->getTokensNew($result2,$result2['company_id'],$data['device_id']);
 			//$this->getTokens($result2);
 
-			print_r($result2);
+			//print_r($result2);
 	}
 	else
 	{
@@ -556,7 +556,35 @@ public function postCommentReply()
 	$data['device_id'] = $this->input->post('device_id');
 
 	$result = $this->ConfessionModel->postCommentReply($data);
-	echo $result;
+
+	if($result)
+	{
+		$data1['comment_id'] = $data['comment_id_fk'];
+
+		$result1 = $this->ConfessionModel->getCommentByID($data1);
+
+		if($result1)
+		{
+			$data2['tbl_id'] = $result1['confession_id_fk'];
+
+			$result2 = $this->ConfessionModel->getConfessionByID($data2);
+
+			//print_r($result2);
+			$result2['propertime'] = $this->time_elapsed_string(strtotime($result2['time']));
+			$result2['title'] = "New Reply On Comment";
+			$result2['pushNotification'] = "1";
+			
+			$this->getTokensNew($result2,$result2['company_id'],$data['device_id']);
+		}
+
+		
+	}
+
+	else
+	{
+		echo "error";
+	}
+	
 }
 
 
