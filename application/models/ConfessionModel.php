@@ -12,7 +12,10 @@ class ConfessionModel extends CI_Model {
 	public function index($data)
 	{
 		//asc");
+		$this->db->select('tbl_id,sender_name,sender_msg,time,avatar,company_id,device_id,has_image');
 		 $result = $this->db->order_by("tbl_id", "desc")->get_where('tbl_feed',$data);
+
+
 		 //$result->propertime = "propertime";
 
       	 return $result->result_array();
@@ -31,7 +34,7 @@ class ConfessionModel extends CI_Model {
 
 		if($result)
 		{
-			return $result;
+			return $this->db->insert_id();;
 		}
 	}
 
@@ -104,8 +107,24 @@ class ConfessionModel extends CI_Model {
 		return $result->result_array();
 	}
 
+	public function getTokensNew($data)
+	{
+		$result = $this->db->get_where('tbl_device_info',$data);
+
+		return $result->result_array();
+	}
+
+	public function getTokenByDeviceId($data1)
+	{
+		$this->db->select('token');
+		$result = $this->db->get_where('tbl_device_info',$data1);
+
+		return $result->row_array()['token'];
+	}
+
 	public function getConfessionByID($data)
 	{
+		$this->db->select('tbl_id,sender_name,sender_msg,time,avatar,company_id,device_id,has_image');
 		$result = $this->db->order_by("tbl_id", "desc")->get_where('tbl_feed',$data);
 		 
       	 return $result->row_array();
@@ -116,6 +135,28 @@ class ConfessionModel extends CI_Model {
 		$result = $this->db->get_where('tbl_comment',$data);
 
 		return $result->num_rows();
+	}
+
+	public function getNoOfReplies($data)
+	{
+		$result = $this->db->get_where('tbl_comment_reply',$data);
+
+		return $result->num_rows();
+	}
+
+	public function getCommentByID($data)
+	{
+		$result = $this->db->get_where('tbl_comment',$data);
+
+		return $result->row_array();
+	}
+
+	public function getImageByID($data)
+	{
+		$this->db->select('confession_image');
+		$result = $this->db->get_where('tbl_feed',$data);
+
+		return $result->row_array();
 	}
 
 

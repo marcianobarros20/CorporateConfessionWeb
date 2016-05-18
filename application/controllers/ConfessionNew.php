@@ -70,9 +70,33 @@ class ConfessionNew extends CI_Controller {
 			//print_r($reg_token);
 		}
 
-		
+	}
+
+	public function getTokensNew($pushdata,$company_id,$sender_device_id)
+	{
+		$data['company_id'] = $company_id;
+		$data1['android_id'] = $sender_device_id;
+
+		$sender_token = $this->ConfessionModel->getTokenByDeviceId($data1);
+
+		$result = $this->ConfessionModel->getTokensNew($data);
 
 		
+		if($result)
+		{
+			foreach ($result as $key)
+			{
+				if($key['token']!=$sender_token)
+				{
+					$reg_token[]=$key['token'];
+				}
+				
+			}
+
+			$this->pushNotification1($reg_token,$pushdata);
+
+			//print_r($reg_token);
+		}
 
 
 	}
@@ -297,8 +321,8 @@ class ConfessionNew extends CI_Controller {
 				
 			}*/
 			//print_r($result1);
-			$this->getTokens($result1);
-			//print_r($result);
+			$this->getTokensNew($result1,$result1['company_id'],$result1['device_id']);
+			//print_r($result1);
 		}
 		else
 		{
@@ -306,6 +330,39 @@ class ConfessionNew extends CI_Controller {
 		}
 
 		
+	}
+
+	public function postConfessionNewWithImage()
+	{
+		$data['sender_name'] = $this->input->post('name');
+		$data['sender_msg'] = $this->input->post('confession');
+		$data['avatar'] = $this->input->post('avatar');
+		$data['device_id'] = $this->input->post('device_id');
+		$data['time'] = date("Y-m-d H:i:s");
+		$data['company_id'] = $this->input->post('company_id');
+		$data['confession_image'] = $this->input->post('confession_image');
+		$data['has_image'] = 1;
+
+		$result = $this->ConfessionModel->postConfession($data);
+
+		if($result)
+		{
+			//echo $result;
+			$tblid['tbl_id'] = $result;
+			$result1 = $this->ConfessionModel->getConfessionByID($tblid);
+			
+			$result1['propertime'] = $this->time_elapsed_string(strtotime($result1['time']));
+			$result1['title'] = "New Confession";
+			$result1['pushNotification'] = "1";
+		
+			$this->getTokensNew($result1,$result1['company_id'],$result1['device_id']);
+			
+		}
+		else
+		{
+			echo "error";
+		}
+
 	}
 
 
@@ -375,11 +432,28 @@ public function postComment()
 
 	$result = $this->ConfessionModel->postComment($data);
 
-
+	$data1['comment_id'] = $result;
 
 	if($result)
 	{
-		print_r($result);
+			$result1 = $this->ConfessionModel->getCommentByID($data1);
+
+			$data2['tbl_id'] = $result1['confession_id_fk'];
+
+			$result2 = $this->ConfessionModel->getConfessionByID($data2); 
+
+			$result2['propertime'] = $this->time_elapsed_string(strtotime($result2['time']));
+			$result2['title'] = "New Comment On Confession";
+			$result2['pushNotification'] = "1";
+			
+			$this->getTokensNew($result2,$result2['company_id'],$data['device_id']);
+			//$this->getTokens($result2);
+
+			//print_r($result2);
+	}
+	else
+	{
+		echo "error";
 	}
 }
 
@@ -396,6 +470,7 @@ public function fetchComment()
 			$time1=$this->time_elapsed_string($time);
 			
 			$result[$i]['propertime'] = $time1;
+			$result[$i]['totalReplies'] = $this->getNoOfReplies($key['comment_id']);
 
 			$i++;
 			
@@ -412,6 +487,15 @@ public function fetchComment()
 	{
 		echo "no result";
 	}
+}
+
+public function getNoOfReplies($tbl_id)
+{
+	$data['comment_id_fk'] = $tbl_id;
+
+	$result = $this->ConfessionModel->getNoOfReplies($data);
+
+	return $result;
 }
 
 public function getDetailsOfID()
@@ -436,12 +520,12 @@ public function getCommentReply()
 	$data['comment_id_fk'] = $this->input->post('comment_id_fk');
 	$result = $this->ConfessionModel->getCommentReply($data);
 
-	$i=0;
+		$i=0;
 		foreach ($result as $key)
 		{
 			$time = strtotime($key['reply_time']);
 			$time1=$this->time_elapsed_string($time);
-			
+		 	
 			$result[$i]['propertime'] = $time1;
 
 			$i++;
@@ -472,7 +556,35 @@ public function postCommentReply()
 	$data['device_id'] = $this->input->post('device_id');
 
 	$result = $this->ConfessionModel->postCommentReply($data);
-	echo $result;
+
+	if($result)
+	{
+		$data1['comment_id'] = $data['comment_id_fk'];
+
+		$result1 = $this->ConfessionModel->getCommentByID($data1);
+
+		if($result1)
+		{
+			$data2['tbl_id'] = $result1['confession_id_fk'];
+
+			$result2 = $this->ConfessionModel->getConfessionByID($data2);
+
+			//print_r($result2);
+			$result2['propertime'] = $this->time_elapsed_string(strtotime($result2['time']));
+			$result2['title'] = "New Reply On Comment";
+			$result2['pushNotification'] = "1";
+			
+			$this->getTokensNew($result2,$result2['company_id'],$data['device_id']);
+		}
+
+		
+	}
+
+	else
+	{
+		echo "error";
+	}
+	
 }
 
 
@@ -505,6 +617,7 @@ public function saveToken()
 
 
 	}
+
 	else//user does not exists
 	{
 		$result2 = $this->ConfessionModel->insertNewUserData($data);//inserting new user's data into database
@@ -521,6 +634,16 @@ public function saveToken()
 
 
 	echo json_encode($data);
+}
+
+
+public function getImageByID()
+{
+	$data['tbl_id'] = $this->input->post('confession_id_fk');
+
+	$result = $this->ConfessionModel->getImageByID($data);
+
+	echo json_encode($result);
 }
 
 
