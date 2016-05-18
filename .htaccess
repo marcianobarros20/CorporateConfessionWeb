@@ -4,10 +4,5 @@
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)$ index.php/$1 [L] 
 
-    RewriteCond %{HTTP_HOST} ^104\.236\.64\.69
-    RewriteRule (.*) corporateconfessions.us/$1 [R=301,L]
-    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php
-    RewriteRule ^index\.php$ / [L,R=301]
-    RewriteCond %{HTTP_HOST} !^www\.
-    RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+ 
 </IfModule>
