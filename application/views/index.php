@@ -753,7 +753,7 @@
                 <div class="social">
                     <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=hello@tier5.us" target="_blank" class="scrollpoint sp-effect3"><i class="fa fa-envelope fa-lg"></i></a>
                     <a href="https://www.facebook.com/tier5development/" target="_blank" class="scrollpoint sp-effect3"><i class="fa fa-facebook fa-lg"></i></a>
-                    <a class="scrollpoint sp-effect3"><i class="fa fa-linkedin fa-lg"></i></a>
+                    <a href="https://www.linkedin.com/company/7797352" target="_blank" class="scrollpoint sp-effect3"><i class="fa fa-linkedin fa-lg"></i></a>
                 </div>
                 <div class="rights">
                     <p>Copyright © 2016 Tier5. All Rights Reserved.</p>
