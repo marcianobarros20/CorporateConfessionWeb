@@ -34,6 +34,7 @@ class ConfessionNew extends CI_Controller {
 			$result[$i]['propertime'] = $time1;
 			$result[$i]['totalcomments'] = $this->getNoOfComments($key['tbl_id']);
 			$result[$i]['like'] = $this->getLikes($key['tbl_id']);
+			$result[$i]['unlike'] = $this->getUnlikes($key['tbl_id']);
 
 			$i++;
 			
@@ -665,6 +666,16 @@ public function getLikes($tbl_id)
 {
 	$data['confession_id_fk'] = $tbl_id;
 	$data['like'] = 1;
+
+	$result = $this->ConfessionModel->getLikes($data);
+
+	return $result;
+}
+
+public function getUnlikes($tbl_id)
+{
+	$data['confession_id_fk'] = $tbl_id;
+	$data['like'] = 0;
 
 	$result = $this->ConfessionModel->getLikes($data);
 
