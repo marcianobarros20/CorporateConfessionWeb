@@ -67,6 +67,7 @@ class ConfessionNew extends CI_Controller {
 			
 			$result[$i]['propertime'] = $time1;
 			$result[$i]['totalcomments'] = $this->getNoOfComments($key['tbl_id']);
+			$result[$i]['personLiked'] = $this->getPersonLiked($data1,$key['tbl_id']);
 			$result[$i]['like'] = $this->getLikes($key['tbl_id']);
 			$result[$i]['unlike'] = $this->getUnlikes($key['tbl_id']);
 
@@ -78,6 +79,23 @@ class ConfessionNew extends CI_Controller {
 		echo json_encode($result);
 		//print_r($result);
 
+	}
+
+	public function getPersonLiked($data1,$tbl_id)
+	{
+		$data1['confession_id_fk'] = $tbl_id;
+		$data1['like'] = 1;
+
+		$result = $this->ConfessionModel->getPersonLiked($data1);
+
+		if($result>1)
+		{
+			return "1";
+		}
+		else
+		{
+			return "0";
+		}
 	}
 
 	public function getNoOfComments($tblid)
