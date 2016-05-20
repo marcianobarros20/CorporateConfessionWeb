@@ -661,14 +661,14 @@ public function registerLikeUnlike()
 }
 
 
-public function getLikes()
+public function getLikes($tbl_id)
 {
-	$data['confession_id_fk'] = $this->input->post('tbl_id');
+	$data['confession_id_fk'] = $tbl_id;
 	$data['like'] = 1;
 
 	$result = $this->ConfessionModel->getLikes($data);
 
-	print_r($result);
+	return $result;
 }
 
 
