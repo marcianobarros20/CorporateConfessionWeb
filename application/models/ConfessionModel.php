@@ -159,5 +159,11 @@ class ConfessionModel extends CI_Model {
 		return $result->row_array();
 	}
 
+	public function registerLikeUnlike($data)
+	{
+		$result = $this->db->insert('tbl_like',$data);
+		return $result;
+	}
+
 
 }

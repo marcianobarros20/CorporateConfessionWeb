@@ -1,6 +1,9 @@
 a{
 	cursor: pointer;
 }
+button:focus, button:hover{
+    outline:none;
+}
 option {
     color: #232424;
 }
