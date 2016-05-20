@@ -46,6 +46,40 @@ class ConfessionNew extends CI_Controller {
 
 	}
 
+	public function indexNew()
+	{
+		//$result = $this->ConfessionModel->index();
+
+		//print_r($result);
+		$data['company_id'] = $this->input->post('company_id');
+		$data1['device_id'] = $this->input->post('device_id');
+		
+		//$result['id'] = 3;
+		$result = $this->ConfessionModel->index($data);
+		//echo "<pre>";
+		//print_r($result);
+
+		$i=0;
+		foreach ($result as $key)
+		{
+			$time = strtotime($key['time']);
+			$time1=$this->time_elapsed_string($time);
+			
+			$result[$i]['propertime'] = $time1;
+			$result[$i]['totalcomments'] = $this->getNoOfComments($key['tbl_id']);
+			$result[$i]['like'] = $this->getLikes($key['tbl_id']);
+			$result[$i]['unlike'] = $this->getUnlikes($key['tbl_id']);
+
+			$i++;
+			
+		}
+		//echo "<pre>";
+		//print_r($result);
+		echo json_encode($result);
+		//print_r($result);
+
+	}
+
 	public function getNoOfComments($tblid)
 	{
 		$data['confession_id_fk'] = $tblid;
