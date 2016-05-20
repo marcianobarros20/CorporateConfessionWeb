@@ -88,14 +88,16 @@ class ConfessionNew extends CI_Controller {
 
 		$result = $this->ConfessionModel->getPersonLiked($data1);
 
-		if($result>1)
+		return $result;
+
+		/*if($result>1)
 		{
 			return "1";
 		}
 		else
 		{
 			return "0";
-		}
+		}*/
 	}
 
 	public function getNoOfComments($tblid)
