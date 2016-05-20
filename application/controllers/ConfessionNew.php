@@ -646,6 +646,19 @@ public function getImageByID()
 	echo json_encode($result);
 }
 
+	
+public function registerLikeUnlike()
+{
+	$data['like'] = $this->input->post('like');
+	$data['confession_id_fk'] = $this->input->post('confession_id_fk');
+	$data['company_id'] = $this->input->post('company_id');
+	$data['device_id'] = $this->input->post('device_id');
+
+	$result = $this->ConfessionModel->registerLikeUnlike($data);
+
+	echo json_encode($result);
+}
+
 
 
 
