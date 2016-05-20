@@ -3,7 +3,6 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)$ index.php/$1 [L] 
-<<<<<<< HEAD
     
     RewriteCond %{HTTP_HOST} ^104\.236\.64\.69
     RewriteRule (.*) corporateconfessions.us/$1 [R=301,L]
@@ -13,9 +12,3 @@
     RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
 
 </IfModule>
-
-=======
-
- 
-</IfModule>
->>>>>>> f7be0097cb74f64b68693ed5c20c4398be4d09b0
