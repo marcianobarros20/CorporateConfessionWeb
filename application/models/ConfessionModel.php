@@ -165,5 +165,11 @@ class ConfessionModel extends CI_Model {
 		return $result;
 	}
 
+	public function getLikes($data)
+	{
+		$result = $this->db->get_where('tbl_like',$data);
+		return $result->num_rows();
+	}
+
 
 }

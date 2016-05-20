@@ -33,6 +33,7 @@ class ConfessionNew extends CI_Controller {
 			
 			$result[$i]['propertime'] = $time1;
 			$result[$i]['totalcomments'] = $this->getNoOfComments($key['tbl_id']);
+			$result[$i]['like'] = $this->getLikes($key['tbl_id']);
 
 			$i++;
 			
@@ -657,6 +658,17 @@ public function registerLikeUnlike()
 	$result = $this->ConfessionModel->registerLikeUnlike($data);
 
 	echo json_encode($result);
+}
+
+
+public function getLikes()
+{
+	$data['confession_id_fk'] = $this->input->post('tbl_id');
+	$data['like'] = 1;
+
+	$result = $this->ConfessionModel->getLikes($data);
+
+	print_r($result);
 }
 
 
