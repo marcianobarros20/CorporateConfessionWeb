@@ -787,7 +787,7 @@ public function registerCommentInfo()
 
 public function getSeenComments($tbl_id,$device_id)
 {
-	echo "hee".$tbl_id."fsd".$device_id;
+	return "hee".$tbl_id."fsd".$device_id;
 }
 
 
