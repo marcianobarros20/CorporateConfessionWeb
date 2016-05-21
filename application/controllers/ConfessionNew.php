@@ -790,9 +790,18 @@ public function getSeenComments($tbl_id,$device_id)
 	$data['confession_id_fk'] = $tbl_id;
 	$data['device_id'] = $device_id;
 
-	$result1 = $this->ConfessionModel->checkCommentRegister($data);
+	$result1 = $this->ConfessionModel->getSeenComments($data);
 
-	return $result1->result_array()['total_count'];
+	if($result1)
+	{
+		return $result1['total_count'];
+	}
+	else
+	{
+		return "new";
+	}
+
+	
 }
 
 
