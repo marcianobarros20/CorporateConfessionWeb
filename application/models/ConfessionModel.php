@@ -195,5 +195,13 @@ class ConfessionModel extends CI_Model {
 		return $result;
 	}
 
+	public function updateCommentInfo($where,$data2)
+	{
+		$this->db->where($where);
+		$result = $this->db->update('tbl_comment_info', $data2); 
+
+		return $result;
+	}
+
 
 }

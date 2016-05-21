@@ -762,7 +762,17 @@ public function registerCommentInfo()
 
 	if($result1->result())
 	{
-		echo "comment already registred need to update total count";
+		//echo "comment already registred need to update total count";
+		$where['device_id'] = $data['device_id'];
+		$where['confession_id_fk'] = $data['confession_id_fk'];
+
+		$data2['total_count'] = $data['total_count'];
+
+		$result2 = $this->ConfessionModel->updateCommentInfo($where,$data2);
+
+		print_r("updated".$result2);
+
+
 	}
 	else
 	{
