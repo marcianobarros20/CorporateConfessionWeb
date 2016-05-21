@@ -185,5 +185,15 @@ class ConfessionModel extends CI_Model {
 		return $result;
 	}
 
+	public function checkCommentRegister($data)
+	{
+		$data1['device_id'] = $data['device_id'];
+		$data1['confession_id_fk'] = $data['confession_id_fk'];
+
+		$result = $this->db->get_where('tbl_comment_info',$data1);
+
+		return $result;
+	}
+
 
 }

@@ -758,9 +758,20 @@ public function registerCommentInfo()
 	$data['device_id'] = $this->input->post('device_id');
 	$data['confession_id_fk'] = $this->input->post('confession_id_fk');
 
-	$result = $this->ConfessionModel->registerCommentInfo($data);
+	$result1 = $this->ConfessionModel->checkCommentRegister($data);
 
-	print_r($result);
+	if($result1)
+	{
+		echo "comment already registred need to update total count";
+	}
+	else
+	{
+		$result = $this->ConfessionModel->registerCommentInfo($data);
+
+		print_r($result);
+	}
+
+	
 }
 
 
