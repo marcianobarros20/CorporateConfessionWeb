@@ -800,7 +800,7 @@ public function getSeenComments($tbl_id,$device_id)
 	}
 	else
 	{
-		return "new";
+		return "0";
 	}
 
 	
