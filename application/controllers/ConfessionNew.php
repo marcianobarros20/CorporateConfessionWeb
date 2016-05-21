@@ -760,7 +760,7 @@ public function registerCommentInfo()
 
 	$result1 = $this->ConfessionModel->checkCommentRegister($data);
 
-	if($result1)
+	if($result1->result())
 	{
 		echo "comment already registred need to update total count";
 	}
