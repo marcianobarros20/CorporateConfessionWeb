@@ -381,6 +381,7 @@ class ConfessionNew extends CI_Controller {
 			$result1['propertime'] = $this->time_elapsed_string(strtotime($result1['time']));
 			$result1['title'] = "New Confession";
 			$result1['pushNotification'] = "1";
+			$result1['totalcomments'] = $this->getNoOfComments($result1['tbl_id']);
 			/*$i=0;
 			foreach ($result1 as $key)
 			{
