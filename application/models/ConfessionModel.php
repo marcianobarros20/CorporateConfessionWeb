@@ -207,7 +207,7 @@ class ConfessionModel extends CI_Model {
 	{
 		$result = $this->db->get_where('tbl_comment_info',$data);
 
-		return $result->result_array();
+		return $result->result();
 	}
 
 
