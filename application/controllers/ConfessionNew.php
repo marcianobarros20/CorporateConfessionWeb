@@ -429,6 +429,7 @@ class ConfessionNew extends CI_Controller {
 			$result1['propertime'] = $this->time_elapsed_string(strtotime($result1['time']));
 			$result1['title'] = "New Confession";
 			$result1['pushNotification'] = "1";
+			$result1['totalcomments'] = $this->getNoOfComments($result1['tbl_id']);
 		
 			$this->getTokensNew($result1,$result1['company_id'],$result1['device_id']);
 			
@@ -520,6 +521,7 @@ public function postComment()
 			$result2['propertime'] = $this->time_elapsed_string(strtotime($result2['time']));
 			$result2['title'] = "New Comment On Confession";
 			$result2['pushNotification'] = "1";
+			$result2['totalcomments'] = $this->getNoOfComments($result2['tbl_id']);
 			
 			$this->getTokensNew($result2,$result2['company_id'],$data['device_id']);
 			//$this->getTokens($result2);
@@ -648,6 +650,7 @@ public function postCommentReply()
 			$result2['propertime'] = $this->time_elapsed_string(strtotime($result2['time']));
 			$result2['title'] = "New Reply On Comment";
 			$result2['pushNotification'] = "1";
+			$result2['totalcomments'] = $this->getNoOfComments($result2['tbl_id']);
 			
 			$this->getTokensNew($result2,$result2['company_id'],$data['device_id']);
 		}
