@@ -178,5 +178,12 @@ class ConfessionModel extends CI_Model {
 		return $result->num_rows();
 	}
 
+	public function registerCommentInfo($data)
+	{
+		$result = $this->db->insert('tbl_comment_info',$data);
+
+		return $result;
+	}
+
 
 }
