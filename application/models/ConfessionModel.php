@@ -205,7 +205,7 @@ class ConfessionModel extends CI_Model {
 
 	public function getSeenComments($data)
 	{
-		$result = $this->db->ger_where('tbl_comment_info',$data);
+		$result = $this->db->get_where('tbl_comment_info',$data);
 
 		return $result->result_array();
 	}
