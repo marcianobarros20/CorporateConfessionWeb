@@ -790,7 +790,9 @@ public function getSeenComments($tbl_id,$device_id)
 	$data['confession_id_fk'] = $tbl_id;
 	$data['device_id'] = $device_id;
 
-	$result1 = $this->ConfessionModel->getSeenComments($data);
+	return $data;
+
+	/*$result1 = $this->ConfessionModel->getSeenComments($data);
 
 	if($result1)
 	{
@@ -799,7 +801,7 @@ public function getSeenComments($tbl_id,$device_id)
 	else
 	{
 		return "new";
-	}
+	}*/
 
 	
 }
