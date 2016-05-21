@@ -69,6 +69,7 @@ class ConfessionNew extends CI_Controller {
 			$result[$i]['totalcomments'] = $this->getNoOfComments($key['tbl_id']);
 			$result[$i]['seenComments'] = $this->getSeenComments($key['tbl_id'],$data1['device_id']);
 			$result[$i]['personLiked'] = $this->getPersonLiked($data1,$key['tbl_id']);
+			$result[$i]['unseenComments'] = $result[$i]['totalcomments'] - $result[$i]['seenComments'];
 			$result[$i]['personDisliked'] = $this->getPersonDisliked($data1,$key['tbl_id']);
 			$result[$i]['like'] = $this->getLikes($key['tbl_id']);
 			$result[$i]['unlike'] = $this->getUnlikes($key['tbl_id']);
