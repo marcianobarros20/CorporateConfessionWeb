@@ -787,7 +787,12 @@ public function registerCommentInfo()
 
 public function getSeenComments($tbl_id,$device_id)
 {
-	return "hee".$tbl_id."fsd".$device_id;
+	$data['confession_id_fk'] = $tbl_id;
+	$data['device_id'] = $device_id;
+
+	$result1 = $this->ConfessionModel->checkCommentRegister($data);
+
+	return $result1->result_array()['total_count'];
 }
 
 
