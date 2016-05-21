@@ -763,6 +763,7 @@ public function registerCommentInfo()
 	$data['total_count'] = $this->input->post('total_count');
 	$data['device_id'] = $this->input->post('device_id');
 	$data['confession_id_fk'] = $this->input->post('confession_id_fk');
+	$data['time'] = date("Y-m-d H:i:s");
 
 	$result1 = $this->ConfessionModel->checkCommentRegister($data);
 
