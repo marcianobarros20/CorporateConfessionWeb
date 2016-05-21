@@ -67,6 +67,7 @@ class ConfessionNew extends CI_Controller {
 			
 			$result[$i]['propertime'] = $time1;
 			$result[$i]['totalcomments'] = $this->getNoOfComments($key['tbl_id']);
+			$result[$i]['seenComments'] = $this->getSeenComments($key['tbl_id'],$key['device_id']);
 			$result[$i]['personLiked'] = $this->getPersonLiked($data1,$key['tbl_id']);
 			$result[$i]['personDisliked'] = $this->getPersonDisliked($data1,$key['tbl_id']);
 			$result[$i]['like'] = $this->getLikes($key['tbl_id']);
@@ -782,6 +783,11 @@ public function registerCommentInfo()
 	}
 
 	
+}
+
+public function getSeenComments($tbl_id,$device_id)
+{
+	echo "hee".$tbl_id."fsd".$device_id;
 }
 
 
