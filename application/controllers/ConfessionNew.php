@@ -796,7 +796,7 @@ public function getSeenComments($tbl_id,$device_id)
 
 	if($result1)
 	{
-		return $result1['total_count'];
+		return $result1;
 	}
 	else
 	{
