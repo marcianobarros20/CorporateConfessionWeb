@@ -819,9 +819,9 @@ public function registerLikeUnlike()
 	$data['company_id'] = $this->input->post('company_id');
 	$data['device_id'] = $this->input->post('device_id');
 
-	//$result = $this->ConfessionModel->registerLikeUnlike($data);
+	$result = $this->ConfessionModel->registerLikeUnlike($data);
 
-	echo json_encode($data);
+	echo json_encode($result);
 }
 
 
