@@ -254,7 +254,7 @@ function ValidateEmail(email) {
         }
     }
 
-                 $('#company_name').keyup(function(e) {
+                /* $('#company_name').keyup(function(e) {
                     
                     if(e.keyCode == 8)
                     {
@@ -264,7 +264,7 @@ function ValidateEmail(email) {
                     
                     
                       search();
-                  });
+                  });*/
 //==================================SEARCH RESULT CLICK EVENT=====================
     function searchClick(tbl_id)
     {
