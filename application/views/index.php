@@ -28,11 +28,16 @@
     <link rel="stylesheet" href="<?php echo base_url().'assets/css/slick.css'?>">
     <link rel="stylesheet" href="<?php echo base_url().'assets/js/rs-plugin/css/settings.css'?>">
     <link rel="stylesheet" href="<?php echo base_url().'assets/css/confession.css'?>">
-    <!-- <link rel="stylesheet" href="assets/css/demo.css">  -->
+
+
+    <!-- <link rel="stylesheet" href="<?php echo base_url().'assets/css/normalize.css'?>" />
+    <link rel="stylesheet" href="<?php echo base_url().'assets/css/demo.css'?>" />
+    <link rel="stylesheet" href="<?php echo base_url().'assets/css/component.css'?>" /> --> 
     
 
     <link rel="stylesheet" href="<?php echo base_url().'assets/css/styles.css'?>">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="http://t4t5.github.io/sweetalert/dist/sweetalert.css">
     
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
@@ -297,7 +302,7 @@
 
                 
 
-                    <div class="col-md-12">
+                    <div class="col-md-12" id="first_form_with_company_info">
                         <div class="row">
                             <div class="col-md-8 col-sm-8 scrollpoint sp-effect1">
                                 <form action="" role="form">
@@ -321,11 +326,6 @@
                                         <input type="text" id="company_name" autocomplete="off" class="form-control" required="true">
                                            <div class="drop-option" id="searchResult">
                                                
-                                               
-                                               
-                                               <!-- <p class="drop-search"><a id="searchRes1">shalini</a><img src="assets/img/pic1.png" alt="Responsive image" class="pull-right"></p>
-                                               <hr>
-                                               <p class="drop-search"><a id="searchRes1">shalini</a><img src="assets/img/pic1.png" alt="Responsive image" class="pull-right"></p> -->
                                            </div> 
                                         </div>
 
@@ -380,10 +380,11 @@
                                         </select> -->
 
                                         <button type="button" id="firstsubmit" class="btn btn-primary btn-lg">Proceed</button>
+                                        
 
                                 </div>
 
-
+                                 
                                 <div id="secondform" style="display: none;" class="wow bounceInRight">
                                 <a id="mylink" href="#secondform" style="display: none"></a>
 
@@ -456,6 +457,72 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="col-md-12 wow bounceInRight" id="package_info" style="display:none">
+                                      <div class="row animate-box fadeInUp animated">
+                                        <div class="col-md-12 heading text-center"><h2>Our Service Packages</h2></div>
+                                      </div>
+                                      <div class="pack-wrap"><!-- container -->
+                                        <div class="package ">
+                                            <div class="name">Basic</div>
+                                            <div class="price">$0</div>
+                                            <div class="trial">Only 35 employees</div>
+                                            <hr>
+                                            <ul>
+                                              <li>
+                                                <strong>35</strong>
+                                                employees
+                                              </li>
+                                              <li>
+                                                <strong>No</strong>
+                                                Support
+                                              </li>
+                                            </ul>
+                                            
+                                              <button class="btn btn-default" onclick="getFreePackage();" data-toggle="modal" type="submit">Subscribe</button>
+
+                                            
+                                          </div>
+                                          <div class="package brilliant">
+                                            <div class="name">Professional</div>
+                                            <div class="price">$10</div>
+                                            <div class="trial">unlimited employees</div>
+                                            <hr>
+                                            <ul>
+                                              <li>
+                                                <strong>Unlimited</strong>
+                                                employees
+                                              </li>
+                                              <li>
+                                                <strong>business hours</strong>
+                                                support
+                                              </li>
+                                              <li>
+                                                3 Avatars
+                                              </li>
+                                            </ul>
+                                            <button class="btn btn-default" onclick="getPackage('professional');" data-toggle="modal" type="submit">Subscribe</button>
+                                        </div>
+                                        <div class="package no-margin-right">
+                                            <div class="name">Gold</div>
+                                            <div class="price">$30</div>
+                                            <div class="trial">24*7 support</div>
+                                            <hr>
+                                            <ul>
+                                              <li>
+                                                <strong>unlimited</strong>
+                                                employees
+                                              </li>
+                                              <li>
+                                                Custom Avatars
+                                              </li>
+                                              <li>Custom company logo in app</li>
+                                            </ul>
+                                           <button class="btn btn-default" onclick="getPackage('gold');" data-toggle="modal" type="submit">Subscribe</button>
+                                          </div>
+                                        </div>
+                                      </div> 
+
                 </div>
             </div>
         </section>
@@ -569,96 +636,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- <section id="reviews">
-            <div class="container">
-                <div class="section-heading inverse scrollpoint sp-effect3">
-                    <h1>Reviews</h1>
-                    <div class="divider"></div>
-                    <p>Read What's The People Are Saying About Us</p>
-                </div>
-                <div class="row">
-                    <div class="col-md-10 col-md-push-1 scrollpoint sp-effect3">
-                        <div class="review-filtering">
-                            <div class="review">
-                                <div class="row">
-                                    <div class="col-md-2">
-                                        <div class="review-person">
-                                            <img src="http://api.randomuser.me/portraits/women/94.jpg" alt="" class="img-responsive">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-10">
-                                        <div class="review-comment">
-                                            <h3>“I love Oleose, I highly rfreezemmend it, Everyone Try It Now”</h3>
-                                            <p>
-                                                - Krin Fox
-                                                <span>
-                                                    <i class="fa fa-star fa-lg"></i>
-                                                    <i class="fa fa-star fa-lg"></i>
-                                                    <i class="fa fa-star fa-lg"></i>
-                                                    <i class="fa fa-star fa-lg"></i>
-                                                    <i class="fa fa-star-o fa-lg"></i>
-                                                </span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="review rollitin">
-                                <div class="row">
-                                    <div class="col-md-2">
-                                        <div class="review-person">
-                                            <img src="http://api.randomuser.me/portraits/men/70.jpg" alt="" class="img-responsive">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-10">
-                                        <div class="review-comment">
-                                            <h3>“Oleaose Is The Best Stable, Fast App I Have Ever Experienced”</h3>
-                                            <p>
-                                                - Theodore Willis
-                                                <span>
-                                                    <i class="fa fa-star fa-lg"></i>
-                                                    <i class="fa fa-star fa-lg"></i>
-                                                    <i class="fa fa-star fa-lg"></i>
-                                                    <i class="fa fa-star-half-o fa-lg"></i>
-                                                    <i class="fa fa-star-o fa-lg"></i>
-                                                </span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="review rollitin">
-                                <div class="row">
-                                    <div class="col-md-2">
-                                        <div class="review-person">
-                                            <img src="http://api.randomuser.me/portraits/men/93.jpg" alt="" class="img-responsive">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-10">
-                                        <div class="review-comment">
-                                            <h3>“Keep It Up Guys Your Work Rules, Cheers :)”</h3>
-                                            <p>
-                                                - Ricky Grant
-                                                <span>
-                                                    <i class="fa fa-star fa-lg"></i>
-                                                    <i class="fa fa-star fa-lg"></i>
-                                                    <i class="fa fa-star fa-lg"></i>
-                                                    <i class="fa fa-star-half-o fa-lg"></i>
-                                                    <i class="fa fa-star-o fa-lg"></i>
-                                                </span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
-        
 
         <section id="demo">
             <div class="container">
@@ -783,91 +760,66 @@
     </div>
 
 
-
-
-    <!-- <div class="row"> 
-
-    <div class="col-lg-3"></div>  
-
-    <div class="col-lg-6"> 
-        <form class="form-horizontal">
-  <fieldset>
-    <legend>Legend</legend>
-    <div class="form-group">
-      <label for="inputEmail" class="col-lg-2 control-label">Email</label>
-      <div class="col-lg-10">
-        <input class="form-control" id="inputEmail" placeholder="Email" type="text">
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="inputPassword" class="col-lg-2 control-label">Password</label>
-      <div class="col-lg-10">
-        <input class="form-control" id="inputPassword" placeholder="Password" type="password">
-        <div class="checkbox">
-          <label>
-            <input type="checkbox"> Checkbox
-          </label>
+    <!-- modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header custom-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Please enter your payment information below</h4>
         </div>
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="textArea" class="col-lg-2 control-label">Textarea</label>
-      <div class="col-lg-10">
-        <textarea class="form-control" rows="3" id="textArea"></textarea>
-        <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="col-lg-2 control-label">Radios</label>
-      <div class="col-lg-10">
-        <div class="radio">
-          <label>
-            <input name="optionsRadios" id="optionsRadios1" value="option1" checked="" type="radio">
-            Option one is this
-          </label>
+        <div class="modal-body">
+              <form action="" method="POST" id="payment-form" class="payment-form">
+                  <span class="payment-errors"></span>
+
+                  <div class="form-row">
+                   
+                      <label>Email</label>
+                      <input class="form-control" id="customerEmail" type="email" size="20" data-stripe="email">
+                    
+                  </div>
+
+                  <div class="form-row">
+                    
+                      <label>Card Number</label>
+                      <input class="form-control" type="text" size="20" data-stripe="number">
+                    
+                  </div>
+
+                  <div class="form-row">
+                    <div class="row">    
+                    <div class="col-md-6 col-sm-6">    
+                    <label>Expiration</label><br>
+                    <input class="form-control half" type="text" size="2" data-stripe="exp_month" placeholder="MM">
+                    
+                    <!-- <span> / </span> -->
+                    <input class="form-control half" type="text" size="2" data-stripe="exp_year" placeholder="YY">
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                    <label>CVC</label>
+                      <input class="form-control " type="text" size="4" data-stripe="cvc">
+                    </div>
+
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <!-- <input type="button" id="payment" class="submit btn btn-block" value="Submit Payment"> -->
+                      <button type="button" class="submit btn btn-block" id="payment" data-load-text="<i class='fa fa-spinner fa-spin '></i> Loading">Pay</button>
+                    
+                  </div>
+
+
+                  
+                </form>
         </div>
-        <div class="radio">
-          <label>
-            <input name="optionsRadios" id="optionsRadios2" value="option2" type="radio">
-            Option two can be something else
-          </label>
-        </div>
+        
       </div>
     </div>
-    <div class="form-group">
-      <label for="select" class="col-lg-2 control-label">Selects</label>
-      <div class="col-lg-10">
-        <select class="form-control" id="select">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
-        <br>
-        <select multiple="" class="form-control">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="col-lg-10 col-lg-offset-2">
-        <button type="reset" class="btn btn-default">Cancel</button>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </div>
-    </div>
-  </fieldset>
-</form>
-</div>
+  </div>
 
 
-<div class="col-lg-3"></div>
-    </div> -->
-
+    
 
 
  
@@ -880,8 +832,41 @@
     <script src="<?php echo base_url().'assets/js/waypoints.min.js'?>"></script>
     <script src="<?php echo base_url().'assets/js/scripts.js'?>"></script>
     <script src="<?php echo base_url().'assets/js/index.js'?>"></script>
+    <script type="text/javascript" src="http://t4t5.github.io/sweetalert/dist/sweetalert-dev.js"></script>
+    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+    <script type="text/javascript">
+      Stripe.setPublishableKey('<?php echo $public_key?>');
+      //$('#myModal').modal('show');
+    </script>
+    <script src="<?php echo base_url().'assets/js/classie.js'?>"></script>
+    <script src="<?php echo base_url().'assets/js/progressButton.js'?>"></script>
+    <script src="<?php echo base_url().'assets/js/modernizr.custom.js'?>"></script>
+    <script>
+            [].slice.call( document.querySelectorAll( 'button.progress-button' ) ).forEach( function( bttn ) {
+                new ProgressButton( bttn, {
+                    callback : function( instance ) {
+                        var progress = 0,
+                            interval = setInterval( function() {
+                                progress = Math.min( progress + Math.random() * 0.1, 1 );
+                                instance._setProgress( progress );
+
+                                if( progress === 1 ) {
+                                    instance._stop(1);
+                                    clearInterval( interval );
+                                }
+                            }, 200 );
+                    }
+                } );
+            } );
+        </script>
 
     </body>
 
 
 </html>
+
+<script type="text/javascript">
+        
+
+
+</script>

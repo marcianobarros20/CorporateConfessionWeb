@@ -49,6 +49,12 @@ class ConfessionWebModel extends CI_Model {
 		$result = $this->db->get_where('company_info_tbl',$data);
 
 		return $result->result_array();
+	}
+
+	public function getStripeTokens()
+	{
+		$result = $this->db->get('stripe_token');
+		return $result->row();
 	} 
 
 

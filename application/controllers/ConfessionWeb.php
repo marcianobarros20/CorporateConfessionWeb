@@ -9,12 +9,17 @@ class ConfessionWeb extends CI_Controller {
 		$this->load->helper('url');
 		$this->load->model('ConfessionWebModel');
 		$this->load->library('session');
+		require_once(APPPATH.'libraries/stripe-php-3.21.0/init.php');
+		//require_once(APPPATH.'libraries/stripe-php-3.21.0/lib/Stripe.php'); // Your path may be different
+		//$this->load->library('stripe');
+
 	}
 
 	public function index()
 	{
 		//echo site_url();
-		$this->load->view('index');
+		$result = $this->ConfessionWebModel->getStripeTokens();
+		$this->load->view('index',$result);
 	}
 
 	public function getCountry()
@@ -84,6 +89,58 @@ class ConfessionWeb extends CI_Controller {
 		$result = $this->ConfessionWebModel->getCompanyDetails($data);
 
 		echo json_encode($result);
+	}
+
+	public function stripeToken()
+	{
+
+		if($this->input->post('package_name')=="free")
+		{
+			echo true;
+		}
+		else
+		{
+			$result = $this->ConfessionWebModel->getStripeTokens();
+			
+
+			if($result->secret_key)
+			{
+				\Stripe\Stripe::setApiKey($result->secret_key);
+
+				$token = $this->input->post('stripeToken');
+
+				try {
+				  $customer = \Stripe\Customer::create(array(
+				  "source" => $token,
+				  "plan" => $this->input->post('package_name'),
+				  "email" => $this->input->post('customerEmail'))
+				);
+
+				} catch(\Stripe\Error\Card $e) {
+					print_r($e);
+				}
+				
+				
+				if($customer['subscriptions']['data'][0]['status']=="active")
+				{
+					echo true;
+				}
+				else
+				{
+					echo false;
+				}
+			}
+			else
+			{
+				echo false;
+			}
+			
+		}
+
+	}
+	public function test()
+	{
+		echo "hello";
 	}
 
 }

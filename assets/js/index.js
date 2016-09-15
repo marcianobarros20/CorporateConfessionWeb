@@ -1,5 +1,6 @@
 $(document).ready(function() {
     var imageBASE="";
+    var package_name = "";
             
     appMaster.preLoader();
     new WOW().init();
@@ -124,6 +125,9 @@ $(document).ready(function() {
             	 company_city = $('#company_city').val();
 
             	 validemail = ValidateEmail(company_email);
+
+                 
+                            
             	 
             	 //return false;
             	 /*person_designation = $('#person_designation').val();*/
@@ -161,21 +165,25 @@ $(document).ready(function() {
             			{
                             //console.log(data);
             				$('#errorAlert').hide();
-            				$('#firstform').hide();
-            				$('#successbox').show();
-	                		$('#supportlink').click();
-	                		//$('#successMsg').text('!RSSOFTTIER593');
+            				
+	                		
 	                		data = JSON.parse(data);
 
 	                		$('#successMsg').text(data);
                             $('#load_screen').hide();
+
+                            $('#first_form_with_company_info').hide();
+                            $('#package_info').show();
+                            $('#supportlink').click();
+                            
             			}
 
             		});
 
+
+
             		
-            		//$('#firstform').hide();
-                    //$('#secondform').fadeIn("slow");
+            		
             	}
 
             });
@@ -247,13 +255,13 @@ function ValidateEmail(email) {
     }
 
                  $('#company_name').keyup(function(e) {
-                    //alert('hello');
+                    
                     if(e.keyCode == 8)
                     {
                         $('.drop-option').hide();
-                        //alert('backspace trapped')
+                        
                     }
-                    //$('#searchResult').html("");
+                    
                     
                       search();
                   });
@@ -331,9 +339,90 @@ function ValidateEmail(email) {
     });
 //============================================================================================
 
+function getPackage(package_name1)
+{
+    package_name = package_name1;
+    if(package_name=="gold")
+    {
+        $('#payment').text("Pay $20");
+    }
+    else if(package_name=="professional")
+    {
+        $('#payment').text("Pay $10");
+    }
+    $('#myModal').modal('show');
+}
+//============================================================================================
+
     $('body').click(function(){
 
          $('#searchResult').hide();
+         $('#customerEmail').val($('#company_email').val());
 
     });
 //============================================================================================
+
+$('#payment').click(function(){
+
+      $(this).button('load');
+      var $form = $('#payment-form');
+      $form.find('.submit').prop('disabled', true);
+      Stripe.card.createToken($form, stripeResponseHandler);
+
+  });
+//============================================================================================
+function stripeResponseHandler(status, response) {
+
+      var $form = $('#payment-form');
+
+      if (response.error) 
+      { 
+        $form.find('.payment-errors').text(response.error.message);
+        $form.find('.submit').prop('disabled', false); // Re-enable submission
+        $('#payment').button('reset');
+      } 
+      else 
+      { 
+
+        var token = response.id;
+        console.log(response);
+        $form.find('.submit').prop('disabled', false); 
+        /*console.log(package_name);
+        return;*/
+        $.post('ConfessionWeb/stripeToken',{stripeToken: token,customerEmail: $('#customerEmail').val(),package_name: package_name} ,function(data){
+
+            if(data)
+            {
+                console.log('true');
+                $('#package_info').hide();
+                $('#first_form_with_company_info').show();
+                $('#firstform').hide();
+                $('#myModal').modal('toggle');
+                $('#successbox').show();                            
+                $('#supportlink').click();
+            }
+            else
+            {
+                console.log('false');
+            }
+
+        });
+      }
+  };
+//=============================================================================================
+function getFreePackage()
+{
+    $('#package_info').hide();
+    $('#first_form_with_company_info').show();
+    $('#firstform').hide();
+    $('#successbox').show();                            
+    $('#supportlink').click();
+}
+//=============================================================================================
+$('#load').on('click', function() {
+    var $this = $(this);
+  $this.button('loading');
+    setTimeout(function() {
+       $this.button('reset');
+   }, 8000);
+});

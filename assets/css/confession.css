@@ -101,6 +101,23 @@ hr {
 
 
 
+.custom-header{padding: 5px;}
+.payment-form label{color: #000;}
+.payment-form input[type="email"]{border-radius: 0;}
+.payment-form input[type="text"]{border-radius: 0;}
+.payment-form .form-row{margin-bottom: 10px;}
+.half {
+  display:inline-block;
+  padding:4px !important;
+  width:45%;
+}
+.payment-form .submit{background: #3071a9; color: #fff; margin-top: 9px;}
+.custom-header h4{padding-bottom: 0;}
+.total{cursor: none;}
+.payment-errors{color: red;}
+
+
+
 @media all and (max-width: 920px) {
 
 	header .navbar-default ul.navbar-nav li a{padding: 7px 13px}
@@ -242,6 +259,8 @@ h3{font-size: 18px;}
 }
 
 }
+/*tesst*/
+
 
 
 
